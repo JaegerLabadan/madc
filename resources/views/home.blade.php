@@ -16,7 +16,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Marck+Script&display=swap');
     </style>
     
-    <script src="{{ asset('script.js') }}" ></script>
+    <script src="{{ asset('js/script.js') }}" ></script>
     <title>MADC Clinique</title>
   </head>
   
