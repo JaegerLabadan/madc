@@ -1,0 +1,280 @@
+@font-face{ 
+	font-family: 'MyWebFont';
+	src: url('../fonts/signaturecollection-webfont.eot');
+	src: url('../fonts/signaturecollection-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/signaturecollection-webfont.woff') format('woff'),
+	     url('../fonts/signaturecollection-webfont.ttf') format('truetype'),
+	     url('../fonts/signaturecollection-webfont.svg#webfont') format('svg');
+}
+/*--------------------------------------------------*/
+/* || FOOTER SECTION */
+
+/* MOBILE VERSION : 768px */
+@media only screen and (max-width: 768px)   {
+    .footer-row-desktop, .desktop-trademark {
+        display: none;
+    }
+    .footer-contain {
+        display:flex;
+        /* background-color: teal; */
+        width: 80%;
+        height: 100%;
+        flex-direction:column;
+        align-self: center;
+        
+    }
+    .footer-logo {
+        /* background-color: rgb(16, 51, 11); */
+        height: 30vw;
+        width: 50%;
+        padding: 4vw;
+    }
+    .footer-logo img {
+        height: 100%;
+        width: 100%;
+        margin-left: -1vw;
+    }
+    .footer-contacts {
+        /* background-color: rgb(197, 85, 33); */
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        
+    }
+    .footer-contacts span {
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 4vw;
+        color: black;
+        letter-spacing: .3vw;
+        margin: -20vw 0 0 0;
+        line-height: 1;
+    }
+    .footer-buttons {
+        /* background-color: rgb(144, 22, 144); */
+        height: 30vw;
+        width: 80%;
+        align-content: center;
+        text-align: center;
+        padding: 2vw 0;
+    }
+    .footer-buttons button {
+        width: 70%;
+        height: 33%;
+        margin: 1.3vw 0;
+        border-radius: 15px;
+        border: none;
+        
+    }
+    .footer-buttons span {
+        font-family: 'Bebas Neue';
+        font-weight: 300;
+        font-size: 3.5vw;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: .3vw;
+
+    }
+    .footer-btn1 {
+        width: 80%;
+        height: 100%;
+        background-color: #db5b02;
+    }
+    .footer-btn1:hover {
+        background-color: #000000;
+    }
+    .footer-btn2 {
+        width: 80%;
+        height: 100%;
+        background-color: #000000;
+    }
+    .footer-btn2:hover {
+        background-color: #db5b02;
+    }
+    .trademark {
+        background-color: rgb(0, 0, 0);
+        height: 15vw;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        padding: 4vw 0;
+        justify-content: center;
+        
+    }
+    .trademark span{
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 3.5vw;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: .4vw;
+    }
+    .trademark-contain {
+        width: 100vw;
+    }
+}   
+/* END OF MOBILE VERSION */
+
+/*-----------------------------------------------------------------------*/
+    .footer-row-desktop {
+        /* background-color: rgb(153, 70, 22); */
+        height: 55vw;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+/* Footer Google Map */
+    .footer-map {
+        /* background-color: rgb(36, 152, 187); */
+        height:100%;
+        width: 100%;
+    }
+    .map-container-4{
+        overflow:hidden;
+        padding-bottom:0;
+        position:relative;
+        height:100%;
+        width: 105%;
+        margin-left: -2vw;
+        }
+        .map-container-4 iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+        }
+/* end Google Map */
+/* Mapside Contacts */
+    .footer-mapside {
+        /* background-color: rgb(106, 36, 187); */
+        height:100%;
+        width: 100%;
+    }
+    .mapside-contain {
+        /* background-color: rgb(180, 147, 70); */
+        height:90%;
+        width: 90%;
+        
+    }
+    .mapside-logo {
+        /* background-color: rgb(16, 51, 11); */
+        height: 35%;
+        width: 80%;
+        padding: 2vw;
+        margin: 5vw 0 0 0;
+        text-align: center;
+    }
+    .mapside-logo img {
+        height: 70%;
+        width: 70%;
+        margin-left: 0vw;
+    }
+    .mapside-contacts {
+        /* background-color: rgb(197, 85, 33); */
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        
+    }
+    .mapside-contacts span {
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 1.3vw;
+        color: black;
+        letter-spacing: .3vw;
+        line-height: .8;
+    }
+/*end Mapside Contacts */
+    .desktop-trademark {
+        background-color: rgb(0, 0, 0);
+        height: 15vw;
+        width: 100%;
+        margin: 0;
+        padding: 2vw 0;
+    }
+    .footer-mapbot {
+        /* background-color: rgb(36, 152, 187); */
+        height:60%;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        line-height: 1;
+       
+    }
+    .footer-mapbot span {
+        font-family: 'Bebas Neue';
+        font-weight: 300;
+        font-size: 1.7vw;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: .2vw;       
+    }
+    .footer-mapbot-left {
+        /* background-color: rgb(27, 156, 118); */
+        height: 100%;
+        width: 80%;
+        text-align: right;
+        padding: 0 1vw;
+    }
+    .footer-mapbot-right {
+        /* background-color: rgb(88, 22, 22); */
+        height: 100%;
+        width: 80%;
+        text-align: left;
+        padding: 0 1vw;
+    }
+    .footer-mapbot2 {
+        /* background-color: rgb(36, 152, 187); */
+        height:40%;
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+        
+        line-height: 1;
+    }
+    .footer-mapbot2 span {
+        font-family: 'Bebas Neue';
+        font-weight: 300;
+        font-size: 1.7vw;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: .2vw;
+        
+    }
+/* TABLET VERSION : 768px - 992px */
+@media only screen and (min-width: 769px) and (max-width: 992px)  {
+    .footer-row-mobile {
+        display: none;
+    }
+    
+}
+
+/* END OF TABLET VERSION */
+
+/* LAPTOP VERSION : 992px - 1200*/
+@media only screen and (min-width: 993px) and (max-width: 1200px)   {
+    .footer-row-mobile {
+        display: none;
+    }
+    .desktop-trademark {
+        height: 12vw;
+    }
+    .footer-mapbot span {
+        font-size: 1.3vw;
+    }
+    .footer-mapbot2 span {
+        font-size: 1.3vw;
+    }
+}
+
+/* END OF LAPTOP VERSION */
+
+/* DESKTOP VERSION : 1200px */
+@media only screen and (min-width: 1201px)  {
+    .footer-row-mobile {
+        display: none;
+    }
+}
+
+/* END OF DESKTOP VERSION */

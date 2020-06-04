@@ -1,0 +1,416 @@
+/* smaller than or equal to 768 px (smartphones)
+    larger than 768 px (small devices, tablets)
+    larger than 992 px (medium devices)
+    larger than 1200px (large devices) */
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@font-face{ 
+	font-family: 'MyWebFont';
+	src: url('../fonts/signaturecollection-webfont.eot');
+	src: url('../fonts/signaturecollection-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/signaturecollection-webfont.woff') format('woff'),
+	     url('../fonts/signaturecollection-webfont.ttf') format('truetype'),
+	     url('../fonts/signaturecollection-webfont.svg#webfont') format('svg');
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0vw;
+    margin: 0vw;
+    
+}
+.about-contain {
+    height: 100%;
+    padding: 0vw;
+    margin: 0vw;
+}
+
+/*--------------------------------------------------*/
+
+/* || ABOUT US SECTION */
+
+/* MOBILE VERSION : 768px */
+@media only screen and (max-width: 768px)   {
+    .aboutus-row {
+        display:none;
+    }
+    .about-row-mobile {
+        background-image: url('../img/about-bg.jpg');
+        max-height: 150vw;
+        object-fit: contain;
+        background-size: contain;
+        padding: 3vw 5vw 5vw 5vw;
+        display: block;
+    } 
+    .about-text-mobile {
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        
+    }
+    .about-team img {
+        margin-top: 0em;
+        height: 200px;
+        width: 200px;
+    }
+    .about-text-mobile h2 {
+        font-size: 10vw;
+        text-align: center;
+        font-weight: 800;
+        font-family: 'MyWebFont', 'Satisfy', cursive;
+        color: #db5b02;
+    }
+    .about-name {
+        margin-top: 0em;
+        font-size: 6vw;
+        text-align: center;
+        font-family: 'MyWebFont';
+        color: #ffffff;
+        
+    }
+    .about-position {
+        font-size: 4vw;
+        text-align: center;
+        font-family: 'Bebas Neue';
+        color: #db5b02;
+        margin-top: -.5em;
+    }
+    .about-label {
+        font-size: 2vw;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        color: #ffffff;
+        
+    }
+
+    .about-carousel-row-mobile img {
+        width: 30%;
+        height: 30%;
+    }
+    
+}
+
+/* END Mobile Version */
+
+
+/* TABLET VERSION : 768px - 992px */
+@media only screen and (min-width: 769px) and (max-width: 992px)  {
+    .about-row-mobile {
+        display:none;
+    }
+    .aboutus-row {
+        background-image: url('../img/about-bg.jpg');
+        height: 600px;
+    }
+    .col-left {
+        /* background-color: black;  --test div*/
+        width: 100%;
+        padding: 10vw 3vw 5vw 7vw;
+    }
+    .col-right {
+        /* background-color: blue; --test div*/
+        width: 100%;
+        margin:3vw 0 0 0;
+    }
+    .about-text {
+        display:flex;
+        width: 100%;
+        height: 80%;
+        /* background-color:green;  --test div*/
+        flex-direction:column;
+        
+    }
+    .abouttxt1 {
+        font-family: 'MyWebFont' ;
+        color: #db5b02;
+    }
+    .abouttxt1 h2 {
+        font-size: 6vw;
+        font-weight: 600;
+        width: auto;
+    }
+    .abouttxt2 p{
+        text-align: justify;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.5vw;
+        color: whitesmoke;
+    }
+    .team-contain {
+        display:flex;
+        height: 90%;
+        /* background-color: red;  --test div*/
+        width:100%;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .team-drmark {
+        height: 8vw;
+        width: 100%;
+        /*background-color: rgb(56, 10, 10);  --test div*/
+        margin: 8vw 0 0 0;
+        display: inline-flex;
+    }
+    .team-drmark img {
+        
+        height:200px;
+        width: 200px;
+    }
+    .about-team img {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
+    }
+    .team-label {
+        font-size: 2.5vw;
+        font-family: "bebas neue";
+        line-height: 2.5vw;  
+        margin: 0 0 0 1vw;
+    }
+    .team-label1 {
+        font-size: 2.7vw;
+        font-family: "MyWebFont";
+    }
+    .team-mmbr2 {
+        margin: 2vw 0 0 39vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+    .team-mmbr3 {
+        margin: -6vw 0 0 8vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+    .team-mmbr4 {
+        margin: -3vw 0 0 35vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+
+}
+/* END OF TABLET VERSION */
+
+/* LAPTOP VERSION : 992px - 1200*/
+@media only screen and (min-width: 993px) and (max-width: 1200px)   {
+    .about-row-mobile {
+        display:none;
+    }
+    .aboutus-row {
+        background-image: url('../img/about-bg.jpg');
+        height: 100%;
+    }
+    .col-left {
+        /* background-color: black;  --test div*/
+        width: 100%;
+        padding: 0vw 7vw;
+        align-self: center;
+    }
+    .col-right {
+        /* background-color: blue; --test div*/
+        width: 100%;
+        margin:3vw 0 0 0;
+        
+    }
+    .about-text {
+        display:flex;
+        width: 100%;
+        height: 100%;
+        /* background-color:green;  --test div*/
+        flex-direction:column;
+        
+    }
+    .abouttxt1 {
+        font-family: 'MyWebFont' ;
+        color: #db5b02;
+    }
+    .abouttxt1 h2 {
+        font-size: 6vw;
+        font-weight: 600;
+        width: auto;
+    }
+    .abouttxt2 p{
+        text-align: justify;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.3vw;
+        color: whitesmoke;
+    }
+    .team-contain {
+        display:flex;
+        height: 100%;
+        /* background-color: red;  --test div*/
+        width:100%;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .team-drmark {
+        height: 8vw;
+        width: 100%;
+        /*background-color: rgb(56, 10, 10);  --test div*/
+        margin: 8vw 0 0 0;
+        display: inline-flex;
+    }
+    .team-drmark img {
+        
+        height:200px;
+        width: 200px;
+    }
+    .about-team img {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
+    }
+    .team-label {
+        font-size: 2.5vw;
+        font-family: "bebas neue";
+        line-height: 2.5vw;  
+        margin: 0 0 0 1vw;
+    }
+    .team-label1 {
+        font-size: 3.5vw;
+        font-family: "MyWebFont";
+    }
+    .team-mmbr2 {
+        margin: 0.5vw 0 0 33vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+    .team-mmbr3 {
+        margin: -4vw 0 0 8vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+    .team-mmbr4 {
+        margin: -3vw 0 0 35vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+
+}
+/* End Laptop Version */
+
+/* DESKTOP VERSION : 1200px */
+@media only screen and (min-width: 1201px)  {
+    .about-row-mobile {
+        display:none;
+    }
+    .aboutus-row {
+        background-image: url('../img/about-bg.jpg');
+        height: 85%;
+    }
+/* 1st column */
+    .col-left {
+        /* background-color: rgb(172, 31, 31);   */
+        width: 100%;
+        padding: 3vw 6vw;
+        align-self: center;
+        height: 100%;
+        
+    }
+    
+    .about-text {
+        display:flex;
+        width: 100%;
+        height: 100%;
+        /* background-color:green;   */
+        flex-direction:column;
+        padding:4vw 1vw;
+        margin: 2vw 0 0 3vw ;
+    }
+    .abouttxt1 {
+        font-family: 'MyWebFont' ;
+        color: #db5b02;
+        margin: 2vw 0 0 0 ;
+    }
+    .abouttxt2 {
+        height: 100%;
+        overflow-y: auto;
+        line-height: 1;
+        margin: -1vw 0 0 0;
+    }
+    .abouttxt1 h2 {
+        font-size: 6vw;
+        font-weight: 600;
+        width: auto;
+        padding: 0;
+    }
+    .abouttxt2 p{
+        text-align: justify;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.3vw;
+        color: rgb(255, 255, 255);
+        
+    }
+
+/* 2nd column */
+    .col-right {
+        /* background-color: blue; --test div*/
+        width: 100%;
+        padding:3vw 0 0 0;
+    }
+    .team-contain {
+        display:flex;
+        height: 100%;
+        /* background-color: red;   */
+        width:100%;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .team-drmark {
+        height: 8vw;
+        width: 100%;
+        /*background-color: rgb(56, 10, 10);  --test div*/
+        margin: 0vw 0 0 3vw;
+        display: inline-flex;
+    }
+    
+    .about-team img {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
+    }
+    .team-label {
+        font-size: 3vw;
+        font-family: "bebas neue";
+        line-height: 3vw;  
+        margin: 0 0 0 1vw;
+    }
+    .team-label1 {
+        font-size: 4vw;
+        font-family: "MyWebFont";
+    }
+    .team-mmbr2 {
+        margin: 1vw 0 0 32vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+    .team-mmbr3 {
+        margin: -4vw 0 0 10vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+    .team-mmbr4 {
+        margin: -3vw 0 0 33vw;
+        width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+}
+/* End Desktop Version */
+
+/* || END ABOUT SECTION */
+
+
+

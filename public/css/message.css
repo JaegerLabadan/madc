@@ -1,0 +1,172 @@
+@font-face{ 
+	font-family: 'MyWebFont';
+	src: url('../fonts/signaturecollection-webfont.eot');
+	src: url('../fonts/signaturecollection-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/signaturecollection-webfont.woff') format('woff'),
+	     url('../fonts/signaturecollection-webfont.ttf') format('truetype'),
+	     url('../fonts/signaturecollection-webfont.svg#webfont') format('svg');
+}
+/*--------------------------------------------------*/
+/* || MESSAGE SECTION */
+
+
+/* MOBILE VERSION : 768px */
+@media only screen and (max-width: 768px)   {
+    .message-desktop {
+        display:none;
+    }
+    .message-content {
+        height: 30vw;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .message-text h2 {
+        font-family: 'Bebas Neue';
+        font-size: 6vw;
+        color: #ffffff;
+        line-height: 1;
+    }
+}
+
+
+/* TABLET VERSION : 768px - 992px */
+@media only screen and (min-width: 769px) and (max-width: 992px)  {
+    .message-mobile  {
+        display:none;
+    }
+    .message-desktop {
+        background-color: rgb(255, 255, 255);
+        height: 60%;
+        
+    }
+    .msg-left {
+        /* background-color: rgb(30, 31, 94); */
+        overflow: hidden;  
+        height: 100%;
+        width: 100%;
+    }
+    .msg-vid {
+        width: 120%;
+        margin-left: -2vw;
+        height: 100%;
+    }
+    .msg-right  {
+        /* background-color: rgb(116, 83, 32); */
+        overflow: hidden;
+        padding: 0vw 5vw;
+        align-self: center;
+        
+        
+    }
+    .msg-right h2 {
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 4vw;
+        color: #202020;
+       
+    }
+    .msg-right p {
+        font-family: 'Helvetica, sans-serif';
+        font-size: 1.7vw;
+        color: #202020;
+        text-align: justify;
+        
+    }
+
+}
+/* END OF TABLET VERSION */
+
+/* LAPTOP VERSION : 992px - 1200*/
+@media only screen and (min-width: 993px) and (max-width: 1200px)   {
+    .message-mobile {
+        display:none;
+    }
+    .message-desktop {
+        background-color: rgb(255, 255, 255);
+        height: 60%;
+        
+    }
+    .msg-left {
+        /* background-color: rgb(30, 31, 94); */
+        overflow: hidden;  
+        height: 100%;
+        width: 100%;
+    }
+    .msg-vid {
+        width: 100%;
+        margin-left: -1vw;
+    }
+    .msg-right  {
+        /* background-color: rgb(116, 83, 32); */
+        overflow: hidden;
+        padding-right: 8vw;
+        padding-left: 4vw;
+        align-self: center;
+        margin-top: -1vw;
+        
+    }
+    .msg-right h2 {
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 2vw;
+        color: #202020;
+       
+    }
+    .msg-right p {
+        font-family: 'Helvetica, sans-serif';
+        font-size: 1.5vw;
+        color: #202020;
+        text-align: justify;
+        
+    }
+
+}
+
+/* DESKTOP VERSION : 1200px */
+@media only screen and (min-width: 1201px)  {
+    .message-mobile {
+        display:none;
+    }
+    .message-desktop {
+        background-color: rgb(255, 255, 255);
+        height: 60%;
+        
+    }
+    .msg-left {
+        /* background-color: rgb(30, 31, 94); */
+        overflow: hidden;  
+        height: 100%;
+        width: 100%;
+    }
+    .msg-vid {
+        width: 120%;
+        margin-left: -1vw;
+    }
+    .msg-right  {
+        /* background-color: rgb(116, 83, 32); */
+        overflow: hidden;
+        padding: 0vw 5vw;
+        align-self: center;
+        margin-top: -1vw;
+        
+    }
+    .msg-right h2 {
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 4vw;
+        color: #202020;
+       
+    }
+    .msg-right p {
+        font-family: 'Helvetica, sans-serif';
+        font-size: 1.5vw;
+        color: #202020;
+        text-align: justify;
+        
+    }
+}
+/* End Desktop Version */
+
+/* || END MESSAGE SECTION */

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+html, body {
+    background-color: rgb(24, 22, 22);
+    height: 100%;
+    margin: 0;
+}
+.about-contain {
+    height: 100%;
+    overflow-x: hidden;
+}
+.mob-about-row {
+    background-image: url('../img/about-bg.jpg');
+    max-height: 80vw;
+    object-fit: contain;
+    background-repeat: no-repeat;
+} 
+.about text {
+    margin: 30vw 0 0 30vw;
+}
+.about-text p{
+    text-align: justify;
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    color: whitesmoke;
+}
+.about-text h2 {
+    font-size: 4vw;
+    font-family: 'Marck Script', 'Satisfy', cursive;
+    color: #db5b02;
+}
+
+@media (min-width: 768px) {
+.about-row-mobile, .about-carousel-row-mobile {
+    display: none;
+}
+}
+
+@media (max-width: 576px) {
+.about-row {
+    display: none;
+}
+.about-row-mobile {
+    max-height: 150vw;
+    object-fit: contain;
+    padding: 3vw 5vw 5vw 5vw;
+    display: block;
+} 
+.about-text-mobile {
+
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.about-team img {
+    margin-top: -3.2em;
+}
+.about-text-mobile h2 {
+    font-size: 10vw;
+    text-align: center;
+    font-family: 'Marck Script', 'Satisfy', cursive;
+    color: #db5b02;
+}
+.about-name {
+    margin-top: -2em;
+    font-size: 6vw;
+    text-align: center;
+    font-family: 'Marck Script', 'Satisfy', cursive;
+    color: #ffffff;
+    
+}
+.about-position {
+    font-size: 4vw;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    color: #db5b02;
+    margin-top: -.5em;
+}
+.about-label {
+    font-size: 2vw;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    
+}
+.about-cntrl-left, .about-cntrl-right {
+    margin-top: -20vw;
+    opacity: .5;
+}
+
+.about-carousel-row-mobile img {
+    width: 30%;
+    height: 30%;
+}
+}

@@ -1,0 +1,339 @@
+@font-face{ 
+    font-family: 'MyWebFont';
+    src: url('../fonts/signaturecollection-webfont.eot');
+    src: url('../fonts/signaturecollection-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/signaturecollection-webfont.woff') format('woff'),
+         url('../fonts/signaturecollection-webfont.ttf') format('truetype'),
+         url('../fonts/signaturecollection-webfont.svg#webfont') format('svg');
+}
+
+
+
+ /* desktop media */
+@media only screen and (min-width: 768px){
+    .services-mobile{
+        display: none;
+    }
+    .mobile-service-button{
+        display: none;
+    }
+    .mobile-tesimonial{
+        display: none;
+    }
+}
+/* end of desktop media */
+.col-md-2.service{
+    left:0;
+    padding: 0;
+ }
+.service-text{
+    padding:2vw 0 1vw 0;
+    margin: 2vw 0 1vw 0;
+}
+.service-text h3{
+    color:#db5b01;
+    font-size: 2.6vw;
+    font-family: bebas neue;
+    font-weight: 500;
+
+}
+.service-img{
+    position: relative;
+    z-index: -1;
+    background-size: cover;
+    width:100%;
+}
+
+
+/* service labels  */
+.service-label1, .service-label2, .service-label3, .service-label4{
+    justify-self: space-around;
+    position:absolute ;
+    bottom: 0;
+    text-align: left;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+}
+.service-label1 h2, .service-label2 h2, .service-label3 h2, .service-label4 h2{
+    font-family: bebas neue;
+    padding: 0.5em 0 0 0.8em;
+}
+
+/* label colors */
+.service-label1 h2{
+    color: #db5b01;
+}
+.service-label2 h2{
+    color: black;
+}
+.service-label3 h2{
+    color: white;
+}
+.service-label4 h2{
+    color: white;
+}
+.service-label1{
+    background: rgba(0, 0, 0, 0.8) ;
+}
+.service-label2{
+    background: rgba(219, 91, 1, 0.5) ;
+}
+.service-label3{
+    background: rgba(0, 0, 0, 0.5) ;
+}
+.service-label4{
+    background: rgba(219, 91, 1, 0.7) ;
+}
+/* end service labels  */
+
+/* service descriptions */
+.service h5{
+   font-size: 1.6vw;
+}
+.service h2{
+    font-size: 2.5vw;
+}
+.service h3{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: Bebas Neue;
+ }
+.col-md-2.service:hover > .service-label1, .col-md-2.service:hover > .service-label2,
+.col-md-2.service:hover > .service-label3, .col-md-2.service:hover > .service-label4{
+    transition: 3s;
+    top:100%;
+    bottom: 0;  
+    position: absolute; 
+}
+.service-description1, .service-description2, .service-description3, .service-description4{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: auto;
+    height: 0;
+    transition: .2s ease;
+}
+.col-md-2.service:hover .service-description1, .col-md-2.service:hover .service-description2,
+.col-md-2.service:hover .service-description3, .col-md-2.service:hover .service-description4 {
+    height: 100%;
+    transition: .35s ease;
+  }
+.service-description1 .text, .service-description2 .text, .service-description3 .text, .service-description4 .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: auto;
+    padding: 0;
+  } 
+
+  /* service background color */
+.service-description1{
+    background: rgba(0, 0, 0, 0.9) ;
+}
+.service-description2{
+    background-color: rgba(219, 91, 2, 0.7);
+}
+.service-description3{
+    background: rgba(0, 0, 0, 0.9) ;
+}
+.service-description4{
+    background-color: rgba(219, 91, 2, 0.8);
+}
+  /* end of service background color */
+
+  /* service text color */
+.service-description1 .text{
+    color: #db5b01;
+}
+.service-description2 .text{
+    color: black;
+}
+.service-description3 .text{
+    color: white;
+}
+.service-description4 .text{
+    color: white;
+}
+  /* end of service text color */
+
+  /* service button */
+.service-button button{
+    position:relative;
+    bottom:0;
+    background: #db5b01;
+    color:white;
+    font-size: 1.8vw;
+    font-family: bebas neue;
+    padding:0 3em 0 3em;
+    border-radius: 13px;
+    border:none;
+}
+
+/* testimonial carousel */
+.testi-img{
+    margin:auto;
+    justify-items: center;
+   padding: 0;
+   float: right;
+}
+p.testi-name{
+    color:black;
+    margin: auto;
+    text-align: left;
+    font-family: Bebas Neue;
+    font-size: 2.5vw;
+}
+p.testi-service{
+    font-family: 'MyWebFont';
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.6vw;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-top: 0.5vw;
+    margin: 0;
+}
+p.testi-msg{
+    color: white;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+/* start of mobile css */
+@media only screen and (max-width: 767px){
+    .row.service-button, .row.services, .row.testimonial{
+        display: none;
+    }
+    .col-5.mobile-service, .col-5.mobile-service1, .col-5.mobile-service2, .col-5.mobile-service3{
+        left: 0;
+        padding:0 0vw 0 0vw;
+    }
+    .services-list-mobile{
+        padding: 0;
+        margin: 0;
+    }
+    /* service text */
+    .service-text h3{
+        font-size: 6vw;
+        font-weight: 500;
+        margin: 0.5vw 0 0.5vw 0;
+    }
+    /* end of service text */
+       
+    /* font size */
+    .services-list-mobile h2{
+        font-size: 5.5vw;
+        padding: 5vw 0 2vw 8vw;
+    }
+    .services-list-mobile h3{
+        font-size: 5vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .services-list-mobile h5{
+        font-size: 4vw;
+        text-transform:none;
+        margin: 2vw; 
+    }
+    /* end of font size */
+    .service-description2 .text, .service-description1 .text, .service-description3 .text, .service-description4 .text{
+        padding: 0 2vw 0 2vw;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .mobile_service_img{
+        position: relative;
+        z-index: -1;
+        background-size: cover;
+        width:100%;
+    }
+    .col-5.mobile-service-hover:hover > .service-label2, .col-5.mobile-service-hover1:hover > .service-label3, 
+    .col-5.mobile-service-hover2:hover > .service-label1, .col-5.mobile-service-hover3:hover > .service-label4 {
+        transition: 3s;
+        top:100%;
+        bottom: 0;  
+        position: absolute; 
+    }
+    .col-5.mobile-service-hover:hover .service-description2,.col-5.mobile-service-hover1:hover .service-description3,
+    .col-5.mobile-service-hover2:hover .service-description1, .col-5.mobile-service-hover3:hover .service-description4 {
+        height: 100%;
+        transition: .25s ease;
+      }
+    
+      /* mobile all service button */
+    .mobile-service-button button{
+      padding: 2.5vw 3vw 2.5vw 3vw;
+      margin: 2vw 0 0 0;
+      color:white;
+      background: #db5b01;
+      border: none;
+      border-radius: 3vw;
+      font-weight: auto;
+      font-size: 4.5vw;
+      font-family: Bebas Neue;
+      text-transform: uppercase;
+    }
+    .mobile-carousel .col-12{
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+    }
+    .mobile-testi-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vw;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .mobile-carousel p{
+        margin: 0;
+        padding: 0;
+    }
+    p.mobile-testi-name{
+        font-family: Bebas Neue;
+        font-size: 6.5vw;
+        font-weight: lighter;
+        padding:0;
+        color: black;
+    }
+
+    p.mobile-testi-service{
+        font-family: 'MyWebFont';
+        color: white;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 8.2vw;
+        margin: 0 0 0 0;
+    }
+    p.mobile-testi-msg{
+        color: white;
+        padding: 0 10vw;
+        text-align: center;
+        font-size: 3.4vw;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-weight: 500;
+    }
+    
+    /* end of mobile service button */
+}
