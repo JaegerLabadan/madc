@@ -11,7 +11,7 @@
 
 
 /* MOBILE VERSION : 768px */
-@media only screen and (max-width: 768px)   {
+@media only screen and (max-width: 767px)   {
     .message-desktop {
         display:none;
     }
@@ -32,7 +32,7 @@
 
 
 /* TABLET VERSION : 768px - 992px */
-@media only screen and (min-width: 769px) and (max-width: 992px)  {
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
     .message-mobile  {
         display:none;
     }
@@ -55,7 +55,7 @@
     .msg-right  {
         /* background-color: rgb(116, 83, 32); */
         overflow: hidden;
-        padding: 0vw 5vw;
+        padding: 0vw 8vw 0 4vw;
         align-self: center;
         
         
@@ -63,7 +63,7 @@
     .msg-right h2 {
         font-family: 'Bebas Neue';
         font-weight: 400;
-        font-size: 4vw;
+        font-size: 3vw;
         color: #202020;
        
     }
@@ -79,7 +79,7 @@
 /* END OF TABLET VERSION */
 
 /* LAPTOP VERSION : 992px - 1200*/
-@media only screen and (min-width: 993px) and (max-width: 1200px)   {
+@media only screen and (min-width: 992px) and (max-width: 1199px)   {
     .message-mobile {
         display:none;
     }
@@ -102,15 +102,15 @@
         /* background-color: rgb(116, 83, 32); */
         overflow: hidden;
         padding-right: 8vw;
-        padding-left: 4vw;
-        align-self: center;
-        margin-top: -1vw;
+        padding-left: 3vw;
+        align-self: start;
+        padding-top: 4vw;
         
     }
     .msg-right h2 {
         font-family: 'Bebas Neue';
         font-weight: 400;
-        font-size: 2vw;
+        font-size:2.5vw;
         color: #202020;
        
     }
@@ -125,7 +125,7 @@
 }
 
 /* DESKTOP VERSION : 1200px */
-@media only screen and (min-width: 1201px)  {
+@media only screen and (min-width: 1200px)  {
     .message-mobile {
         display:none;
     }

@@ -29,7 +29,7 @@
       <div class="row hero-mobile">
         <div class="flex-container mobhero-content mx-auto">
               <div class="mob-logo ">
-              <img  class="image-fluid" src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
+              <img  class="img-fluid" src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
               </div>
               <div class="mobhero-text ">
                 <h1> The smile make-over specialist</h1>
@@ -45,10 +45,10 @@
       <div class="row hero-row">
         <div class="flex-container hero-topbar">
             <div class="hero-logo ">
-               <img  class="image-fluid mx-auto my-auto" src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
+               <img  class="img-fluid mx-auto " src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
             </div>
             <div class="hero-text ml-auto my-auto">
-                <span>(088) 855-0225 | 0917-771-9565</span>
+                <span >(088) 855-0225 | 0917-771-9565</span>
                 <span style="color:#db5b02;">009 Patag 6th Division</span><span style="margin-left: -2vw;">, Cagayan De Oro City</span>
                 <i class="fa fa-facebook hero-icon"></i>
                 <i class="fa fa-instagram hero-icon"></i>
@@ -202,8 +202,8 @@
             <div class="col-md-1"></div>
         </div>
 
-        <div class="row service-button" style="padding: 0;margin-top:1.8vw;">
-            <div class="text-center col-md-4 pr-md-0"></div>
+        <div class="row service-button " >
+            <div class="text-center col-md-4 pr-md-0 "></div>
             <div class="text-center col-md-4 pr-md-0">
                 <button>see all services</button>
             </div>
@@ -212,15 +212,15 @@
        
 
       <!-- {{-- testimonial carousel --}} -->
-          <div class="row testimonial">
-            <div class="col testimonial-car" style="background-image: url('photos/testi_bg.jpg'); height:auto;margin-top:2vw;">
-                <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" style="height:25vw">
+          <div class="row testimonial ">
+            <div class="col testimonial-car " style="background-image: url('photos/testi_bg.jpg');">
+                <div id="carouselExampleInterval" class="carousel slide testi-carousel " data-ride="carousel">
+                <div class="carousel-inner testi-inner" style="height:100%; ">
                 
-                  <div class="carousel-item active testi-bg" data-interval="10000">
-                    <div class="row align-items-center" style="height:25vw;">  
-                    <div class="col-lg-4 col-sm-5">
-                    <img class="d-block testi-img" src="{{ asset('photos/testimonial.png') }}" alt="First slide" style="max-width:20vw; height:auto;">
+                  <div class="carousel-item active testi-bg " data-interval="10000">
+                    <div class="row align-content-center" style="height:100%;">  
+                    <div class="col-lg-4 col-sm-5 testi-img-holder">
+                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/testimonial.png') }}" alt="First slide">
                     </div>
                     <div class="col-lg-7 col-sm-5">
                         <span><p class="testi-name">tina arena</p></span>
@@ -233,10 +233,10 @@
                     </div>
                   </div>
 
-                  <div class="carousel-item" data-interval="1000000">
-                    <div class="row align-items-center testi-bg" style="height:25vw;">
-                        <div class="col-lg-4 col-sm-5" >
-                    <img class="d-block testi-img" src="{{ asset('photos/test.png') }}" alt="Second slide" style="max-width:20vw; height:auto;">
+                  <div class="carousel-item testi-bg" data-interval="1000000">
+                    <div class="row align-items-center " style="height:100%;">
+                        <div class="col-lg-4 col-sm-5 testi-img-holder" >
+                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/test.png') }}" alt="Second slide" >
                         </div>
                         <div class="col-lg-7 col-sm-5">
                             <span><p class="testi-name">palalabs</p></span>
@@ -249,10 +249,10 @@
                     </div>
                   </div>
 
-                  <div class="carousel-item" data-interval="1000000">
-                    <div class="row align-items-center testi-bg" style="height:25vw;">
-                    <div class="col-lg-4 col-sm-5" >    
-                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/gwapa.png') }}" alt="Third slide" style="max-width:20vw; height:auto;">
+                  <div class="carousel-item testi-bg" data-interval="1000000">
+                    <div class="row align-items-center " style="height:100%;">
+                    <div class="col-lg-4 col-sm-5 testi-img-holder" >    
+                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/gwapa.png') }}" alt="Third slide" >
                     </div>
                     <div class="col-lg-7 col-sm-5">
                         <span><p class="testi-name">palalabs ni Ivan</p></span>
@@ -286,6 +286,7 @@
 
 
         <!-- {{-- MOBILE VERSION --}} -->
+        <div class="mobile-section-contain">
         <div class="row services-mobile">
             <div class="col-12 p-0" style="height:auto;margin:0;">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -394,7 +395,7 @@
 
         <!-- {{-- MOBILE TESTIMONIAL --}} -->
         <div class="row p-0 justify-content-start mobile-tesimonial">
-        <div class="col mobile-testimonial" style="background-image: url('photos/testi_bg.jpg'); height:auto;margin-top:4vw;">
+        <div class="col mobile-testimonial" style="background-image: url('photos/testi_bg.jpg'); height:auto;">
             <div id="carouselExampleInterval2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" style="height:85vw">
             
@@ -452,6 +453,7 @@
       </div>
       </div>
     </div>
+    </div>
         <!-- {{-- END MOBILE VERSION --}} -->
         
 
@@ -463,12 +465,12 @@
     <!-- ||  ABOUT SECTION  || -->
     <!-- mobile version about section -->
     <div class="row  about-row-mobile " >
-        <div class="col about-text-mobile pt-3">
+        <div class="col about-text-mobile pt-2">
             <h2>About Us</h2>
             <div id="demo" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner about-team">
                   <div class="carousel-item about-team active">
-                  <img class="image-fluid mx-auto d-block" src="{{ asset('img/team-circle1.png') }}">
+                  <img class="img-fluid mx-auto d-block" src="{{ asset('img/team-circle1.png') }}">
                       <h3 class="about-name">Dr. Mark Antonine Sucgang</h3>
                       <h4 class="about-position">SMILE MAKE-OVER SPECIALIST</h4>
                       <p class="about-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -477,7 +479,7 @@
                   
                   </div>
                   <div class="carousel-item about-team">
-                  <img class="image-fluid mx-auto d-block" src="{{ asset('img/team-circle2.png') }}">         
+                  <div class="team-subimage"><img class="img-fluid mx-auto d-block" src="{{ asset('img/team-circle2.png') }}"></div>        
                       <h3 class="about-name">Team Member #2</h3>
                       <h4 class="about-position">All Around Doctor</h4>
                       <p class="about-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -486,7 +488,7 @@
                   </div>
 
                   <div class="carousel-item about-team">
-                  <img class="image-fluid mx-auto d-block" src="{{ asset('img/team-circle3.png') }}">         
+                  <div class="team-subimage"><img class="img-fluid mx-auto d-block" src="{{ asset('img/team-circle3.png') }}"></div>       
                       <h3 class="about-name">Team Member #3</h3>
                       <h4 class="about-position">Assistant #1</h4>
                       <p class="about-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -495,7 +497,7 @@
                   </div>
 
                   <div class="carousel-item about-team">
-                  <img class="image-fluid mx-auto d-block" src="{{ asset('img/team-circle4.png') }}">         
+                  <div class="team-subimage"><img class="img-fluid mx-auto d-block" src="{{ asset('img/team-circle4.png') }}"></div>        
                       <h3 class="about-name">Team Member #4</h3>
                       <h4 class="about-position">Assistant #2</h4>
                       <p class="about-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -532,16 +534,16 @@
         <div class="col-lg-6 col-md-6 col-right my-auto">
             <div class="flex-container team-contain ">
                 <div class="media team-drmark ">
-                    <img  class="image-fluid rounded-circle align-self-center" src="{{ asset('img/team-circle1.png') }}" alt="Dr. Mark Sucgang">              
+                    <img  class="img-fluid rounded-circle align-self-center" src="{{ asset('img/team-circle1.png') }}" alt="Dr. Mark Sucgang">              
                     <div class="media-body team-label align-self-center">
                     <span class="team-label1" style="color:white;">Dr. Mark Antonine Sugcang<br></span>
                     <span class="team-label2" style="color:#db5b02;margin-top:-2vw;">SMILE SPECIALIST</span>     
                     </div>                 
                 </div>
 
-                <div class="team-mmbr2"><img class="image-fluid " src="{{ asset('img/team-circle2.png') }}"></div>
-                <div class="team-mmbr3"><img class="image-fluid " src="{{ asset('img/team-circle3.png') }}"></div>
-                <div class="team-mmbr4"><img class="image-fluid " src="{{ asset('img/team-circle4.png') }}"></div>
+                <div class="team-mmbr2"><img class="img-fluid " src="{{ asset('img/team-circle2.png') }}"></div>
+                <div class="team-mmbr3"><img class="img-fluid " src="{{ asset('img/team-circle3.png') }}"></div>
+                <div class="team-mmbr4"><img class="img-fluid " src="{{ asset('img/team-circle4.png') }}"></div>
                 
             </div>
         </div>
@@ -556,7 +558,7 @@
           <div class="flex-container footer-contain mx-auto">
               
               <div class="footer-logo mx-auto">
-                  <img  class="image-fluid " src="{{ asset('img/madc-logo.png') }}" alt="MADC-logo">
+                  <img  class="img-fluid " src="{{ asset('img/madc-logo.png') }}" alt="MADC-logo">
               </div>   
                  
               <div class="footer-contacts mx-auto ">
@@ -606,7 +608,7 @@
         <div class="col-md-4 col-lg-4 footer-mapside ">
             <div class="flex-container mapside-contain mx-auto">     
                   <div class="mapside-logo mx-auto">
-                      <img  class="image-fluid " src="{{ asset('img/madc-logo.png') }}" alt="MADC-logo">
+                      <img  class="img-fluid " src="{{ asset('img/madc-logo.png') }}" alt="MADC-logo">
                   </div>   
                     
                   <div class="mapside-contacts mx-auto ">

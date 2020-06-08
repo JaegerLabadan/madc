@@ -8,27 +8,13 @@
 }
 
 
-
- /* desktop media */
-@media only screen and (min-width: 768px){
-    .services-mobile{
-        display: none;
-    }
-    .mobile-service-button{
-        display: none;
-    }
-    .mobile-tesimonial{
-        display: none;
-    }
-}
-/* end of desktop media */
 .col-md-2.service{
     left:0;
     padding: 0;
  }
 .service-text{
-    padding:2vw 0 1vw 0;
-    margin: 2vw 0 1vw 0;
+    padding:2vw 0;
+    margin: 2vw 0;
 }
 .service-text h3{
     color:#db5b01;
@@ -166,24 +152,55 @@
   /* end of service text color */
 
   /* service button */
-.service-button button{
+  .service-button {
+      /* background-color: fuchsia; */
+      display: flex;
+      align-self: center;
+      height: 5vw;
+      margin: 2vw 0;
+      
+  }
+.service-button button {
     position:relative;
-    bottom:0;
     background: #db5b01;
     color:white;
-    font-size: 1.8vw;
-    font-family: bebas neue;
-    padding:0 3em 0 3em;
+    font-size: 3vw;
+    font-family: 'Bebas Neue';
     border-radius: 13px;
     border:none;
-}
+    height: 3.5vw;
+    width: 80%;
+    height: 100%;
 
+}
+.text-center {
+    padding: 1vw 0;
+}
 /* testimonial carousel */
-.testi-img{
-    margin:auto;
+.testimonial {
+    height: 60%;
+    padding: 0;
+    background-color: goldenrod;
+    margin: 2vw 0 0 0;
+}
+.testimonial-car {
+    height: 100%;
+    margin: 0;
+    padding: 0vw 0;
+    width: auto;
+}
+.testi-img-holder img{
+    /* background-color: hotpink; */
+    height: 20vw;
+    width: auto;
+    margin: -1vw 0 0 0;
+}
+.testi-img{ 
     justify-items: center;
-   padding: 0;
-   float: right;
+    float: right;
+    height: 40%;
+    width: 40%;
+    /* background-color: goldenrod; */
 }
 p.testi-name{
     color:black;
@@ -211,6 +228,113 @@ p.testi-msg{
 
 
 
+ /* TABLET VERSION : 768px - 992px */
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+    .mobile-section-contain {
+        display: none;
+    }
+    .service-button {
+        /* background-color: fuchsia; */
+        display: flex;
+        align-self: center;
+        height: 5vw;
+        margin: 3vw 0 2vw 0;
+    }
+    .testimonial {
+        height: 35%;
+        padding: 0;
+        background-color: goldenrod;
+    }
+    .text-center {
+        padding: 0;
+    }
+    .testi-inner {
+        height: 100%;
+        width: 100%;
+        padding: 4vw 0 0 0;
+    }
+    .testi-img-holder img{
+        /* background-color: hotpink; */
+        height: 20vw;
+        width: auto;
+        margin: -1vw 0 0 0;
+    }
+    .testi-img{ 
+        justify-items: center;
+        float: right;
+        height: 40%;
+        width: 40%;
+        /* background-color: goldenrod; */
+    }
+}
+/* END OF TABLET VERSION */
+
+/* LAPTOP VERSION : 992px - 1200*/
+@media only screen and (min-width: 992px) and (max-width: 1199px)   {
+    .mobile-section-contain {
+        display: none;
+    }
+    .service-button {
+        /* background-color: fuchsia; */
+        display: flex;
+        align-self: center;
+        height: 5vw;
+        margin: 3vw 0 2vw 0;
+    }
+    .testimonial {
+        height: 40%;
+        padding: 0;
+        background-color: goldenrod;
+    }
+    .text-center {
+        padding: 0;
+    }
+    .testi-inner {
+        height: 100%;
+        width: 100%;
+        padding: 3vw 0 0 0;
+    }
+    p.testi-msg{
+        color: white;
+        font-size: 1.5vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 5vw 0 0;
+    }
+}
+/* End Laptop Version */
+
+/* DESKTOP VERSION : 1200px */
+@media only screen and (min-width: 1200px)  {
+    .mobile-section-contain {
+        display: none;
+    }
+    .service-button {
+        /* background-color: fuchsia; */
+        display: flex;
+        align-self: center;
+        height: 5vw;
+        margin: 3vw 0 2vw 0;
+    }
+    .testimonial {
+        height: 50%;
+        padding: 0;
+        background-color: goldenrod;
+    }
+    .text-center {
+        padding: 0;
+    }
+    .testi-inner {
+        height: 100%;
+        width: 100%;
+        padding: 4vw 0 0 0;
+    }
+    p.testi-msg{
+        color: white;
+        font-size: 1.5vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 5vw 0 0;
+    }
+}
 
 
 

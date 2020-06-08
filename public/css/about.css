@@ -30,7 +30,7 @@ html, body {
 /* || ABOUT US SECTION */
 
 /* MOBILE VERSION : 768px */
-@media only screen and (max-width: 768px)   {
+@media only screen and (max-width: 767px)   {
     .aboutus-row {
         display:none;
     }
@@ -39,7 +39,7 @@ html, body {
         max-height: 150vw;
         object-fit: contain;
         background-size: contain;
-        padding: 3vw 5vw 5vw 5vw;
+        padding: 3vw 5vw;
         display: block;
     } 
     .about-text-mobile {
@@ -47,6 +47,10 @@ html, body {
         align-items: center;
         text-align: justify;
         
+    }
+    .about-team {
+        height: 100%;
+        width: 100%;
     }
     .about-team img {
         margin-top: 0em;
@@ -61,7 +65,7 @@ html, body {
         color: #db5b02;
     }
     .about-name {
-        margin-top: 0em;
+        margin-top: 1vw;
         font-size: 6vw;
         text-align: center;
         font-family: 'MyWebFont';
@@ -73,14 +77,15 @@ html, body {
         text-align: center;
         font-family: 'Bebas Neue';
         color: #db5b02;
-        margin-top: -.5em;
+        margin-top:-2vw;
     }
     .about-label {
-        font-size: 2vw;
+        font-size: 2.5vw;
         text-align: center;
         font-family: Helvetica, sans-serif;
         color: #ffffff;
-        
+        height: 100%;
+        width: 100%;
     }
 
     .about-carousel-row-mobile img {
@@ -94,7 +99,7 @@ html, body {
 
 
 /* TABLET VERSION : 768px - 992px */
-@media only screen and (min-width: 769px) and (max-width: 992px)  {
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
     .about-row-mobile {
         display:none;
     }
@@ -195,7 +200,7 @@ html, body {
 /* END OF TABLET VERSION */
 
 /* LAPTOP VERSION : 992px - 1200*/
-@media only screen and (min-width: 993px) and (max-width: 1200px)   {
+@media only screen and (min-width: 992px) and (max-width: 1199px)   {
     .about-row-mobile {
         display:none;
     }
@@ -298,13 +303,13 @@ html, body {
 /* End Laptop Version */
 
 /* DESKTOP VERSION : 1200px */
-@media only screen and (min-width: 1201px)  {
+@media only screen and (min-width: 1200px)  {
     .about-row-mobile {
         display:none;
     }
     .aboutus-row {
         background-image: url('../img/about-bg.jpg');
-        height: 85%;
+        height: 80%;
     }
 /* 1st column */
     .col-left {
@@ -313,6 +318,7 @@ html, body {
         padding: 3vw 6vw;
         align-self: center;
         height: 100%;
+        overflow: hidden;
         
     }
     
