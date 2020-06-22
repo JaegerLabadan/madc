@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+
+
+// AJAX routes
+Route::get('check_if_full', 'AppointmentController@checkIfDayIsFull')->name('ajax_check_if_full');
+Route::get('check_if_taken', 'AppointmentController@checkIfAppointmentExists')->name('ajax_check_if_exists');

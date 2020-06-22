@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{-- <link href="https://fonts.googleapis.com/css2?family=Satisfyfamily=Marck+Script&display=swap" rel="stylesheet"> --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/about.css') }}" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="{{ asset('css/hero-section.css') }}" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="{{ asset('css/message.css') }}" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="{{ asset('css/services.css') }}" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Marck+Script&display=swap');
     </style>
     
-    <script src="{{ asset('js/script.js') }}" ></script>
+    {{-- <script src="{{ asset('js/script.js') }}" ></script> --}}
+    {{-- <script src="{{ asset('js/demo.js') }}"></script> --}}
+    
     <title>MADC Clinique</title>
   </head>
   
@@ -42,6 +45,81 @@
       </div> <!-- end of mobile hero row -->
 
       <!-- desktop version hero-section row -->
+      <!-- modal for appointment form -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Appointment Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="">
+                <div class="form-group">
+                  <label for="">Full Name</label>
+                  <input id="userName" type="text" class="form-control" name="fullname" placeholder="Enter Full Name">
+                </div>
+
+                <div class="form-group">
+                  <label for="">Phone</label>
+                  <input id="userPhone" type="tel" class="form-control" name="phone" placeholder="xxxx-xxxx-xxx">
+                </div>
+
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input id="userEmail" type="email" class="form-control" name="email" placeholder="Enter Email">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="service">Service</label>
+                    <input type="hidden" name="service" id="userService" data-time="">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle custom-select" type="button" id="dropdownServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Service
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdowdropdownServicesnMenuButton">
+                        <a class="dropdown-item" href="#" data-service="Consultation" data-time="30">Consultation - 30 mins</a>
+                        <a class="dropdown-item" href="#" data-service="Tooth Extraction" data-time="30">Tooth Extraction - 30 mins</a>
+                        <a class="dropdown-item" href="#" data-service="Oral prophylaxis" data-time="30">Oral prophylaxis - 30 mins</a>
+                        <a class="dropdown-item" href="#" data-service="Orthodontics adjustment" data-time="30">Orthodontics adjustment - 30 mins</a>
+                        <a class="dropdown-item" href="#" data-service="Orthodontic installation" data-time="60">Orthodontic installation- 1 hour </a>
+                        <a class="dropdown-item" href="#" data-service="Composite veneers" data-time="180">Composite veneers - 3 hours</a>
+                        <a class="dropdown-item" href="#" data-service="All porcelain veneers" data-time="180">All porcelain veneers - 3 hours</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="date">Date</label>
+                      <input id="userDate" class="form-control" type="date">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="time">Available Time</label><small class="alert-no-time"> Please not that if you changed the service you need to select the date again.</small> <br>
+                  <small class="alert-no-time">Please set the date first.</small>
+                  <div id="timetable">
+                    
+                  </div>
+                </div>
+               
+                <button class="form-control" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+               {{-- calendar appointment for today --}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="row hero-row">
         <div class="flex-container hero-topbar">
             <div class="hero-logo ">
@@ -59,7 +137,7 @@
                 <div class="hero-left m-auto ">
                     <div class="hero-left-txt ">
                     <h1> The smile make-over specialist</h1>                    
-                      <button type="button" class="mobhero-btn"><span class="mx-auto">Start Your Smile Make-over Now</span></button>
+                      <button type="button" class="mobhero-btn" data-toggle="modal" data-target="#exampleModalCenter"><span class="mx-auto">Start Your Smile Make-over Now</span></button>
                     </div>
                 </div>
         </div>
@@ -94,8 +172,8 @@
           </div>
 
           <div class="col-md-6 msg-right ">
-            <h2>Your Safety is our primary concern</h2>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            <h2 class="text-center">Your Safety is our primary concern</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
               irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -659,9 +737,11 @@
 
   </div> <!-- end of container -->   
   
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/moment-with-locales.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/modal.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
+
   </body>
 </html>
