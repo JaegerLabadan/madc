@@ -1,52 +1,40 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
+    var start;
+    var end;
     var timeBy30 = [
-        '9:00 AM', '9:30 AM',
-        '9:30 AM', '10:00 AM', 
-        '10:00 AM', '10:30 AM',
-        '10:30 AM', '11:00 AM',
-        '11:00 AM', '11:30 AM',
-        '11:30 AM', '12:00 PM',
-        '12:00 PM', '12:30 PM',
-        '12:30 PM', '1:00 PM',
-        '1:00 PM', '1:30 PM',
-        '1:30 PM', '2:00 PM',
-        '2:00 PM', '2:30 PM',
-        '2:30 PM', '3:00 PM',
-        '3:00 PM', '3:30 PM',
-        '3:30 PM', '4:00 PM',
-        '4:00 PM', '4:30 PM',
-        '4:30PM', '5:00 PM'
+        ['9:00 AM', '9:30 AM'],
+        ['9:30 AM', '10:00 AM'],
+        ['10:00 AM', '10:30 AM'],
+        ['10:30 AM', '11:00 AM'],
+        ['11:00 AM', '11:30 AM'],
+        ['11:30 AM', '12:00 PM'],
+        ['12:00 PM', '12:30 PM'],
+        ['12:30 PM', '1:00 PM'],
+        ['1:00 PM', '1:30 PM'],
+        ['1:30 PM', '2:00 PM'],
+        ['2:00 PM', '2:30 PM'],
+        ['2:30 PM', '3:00 PM'],
+        ['3:00 PM', '3:30 PM'],
+        ['3:30 PM', '4:00 PM'],
+        ['4:00 PM', '4:30 PM'],
+        ['4:30 PM', '5:00 PM']
     ];
 
     var timeBy1 = [
-        '9:00 AM', '10:00 AM', 
-        '9:30 AM', '10:30 AM',
-        '11:00 AM', '12:00 PM',
-        '11:30 AM', '12:30 PM',
-        '12:00 PM', '1:00 PM',
-        '12:30 PM', '1:30 PM',
-        '1:00 PM', '2:00 PM',
-        '1:30 PM', '2:30 PM',
-        '2:00 PM', '3:00 PM',
-        '2:30 PM', '3:30 PM',
-        '3:00 PM', '4:00 PM',
-        '3:30 PM', '4:30 PM',
-        '4:00 PM', '5:00 PM',
+        ['9:00 AM', '10:00 AM'],
+        ['11:00 AM', '12:00 PM'],
+        ['12:00 PM', '1:00 PM'],
+        ['1:00 PM', '2:00 PM'],
+        ['2:00 PM', '3:00 PM'],
+        ['3:00 PM', '4:00 PM'],
+        ['4:00 PM', '5:00 PM'],
     ];
 
     var timeBy3 = [
-        '9:00 AM', '12:00 PM',
-        '9:30 AM', '12:30 PM',
-        '10:00 AM', '1:00 PM',
-        '10:30 AM', '1:30 PM',
-        '11:00 AM', '2:00 PM',
-        '11:30 AM', '2:30 PM',
-        '12:00 PM', '3:00 PM',
-        '12:30 PM' , '3:30 PM',
-        '1:00 PM', '4:00 PM',
-        '1:30 PM', '4:30 PM',
-        '2:00 PM', '5:00 PM'
+        ['9:00 AM', '12:00 PM'],
+        ['12:00 PM', '2:00 PM'],
+        ['2:00 PM', '5:00 PM']
     ]
 
     var timeTableClone = $('#timetable').clone();
@@ -61,101 +49,235 @@ $(document).ready(function(){
 
     });
 
-    $('.dropdown-item').on('click', function(){
+    $('.dropdown-item').on('click', function () {
 
         $('#timetable').replaceWith(timeTableClone.clone());
         counter = 0;
         inccounter = 1;
         var service = $(this).attr('data-service');
-        var time = $(this).attr('data-time');        
+        var time = $(this).attr('data-time');
         $('#dropdownServices').text(service);
         $('#userService').val(service);
         $('#userService').attr('data-time', time);
 
+        var date = $('#userDate').val();
+        var slot = $('#userSlot').val();
+
+        if(date != ""){
+
+            $.ajax({
+                url: "check_if_full",
+                method: "GET",
+                data: {
+                    "date": date,
+                    "time": time,
+                    "slot": slot
+                },
+                success: function (result) {
+    
+                    if (result == "FULL") {
+    
+                        console.log("Full");
+    
+                    }
+    
+                    else {
+    
+                        var time = $('#userService').attr('data-time');
+                        if (time == 30) {
+    
+                            $.each(timeBy30, function (key, val) {
+    
+                                let time = result.find(e => (e.appointment_time_start === val[0]));
+                                if (!time) {
+    
+                                    let checker = false;
+                                    $.each(result, function (row, item) {
+                                        let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                        let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                        
+                                        let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                        let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
+    
+                                        if(start <= startVal && endVal <= end) checker = true;
+                                    });
+    
+                                    if (!checker) {
+                                        $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                    }
+                                }
+    
+                            });
+    
+                        }
+                        else if (time == 60) {
+    
+                            $.each(timeBy1, function (key, val) {
+    
+                                let time = result.find(e => (e.appointment_time_start === val[0]));
+                                if (!time) {
+    
+                                    let checker = false;
+                                    $.each(result, function (row, item) {
+                                        let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                        let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                        
+                                        let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                        let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
+    
+                                        if(start <= startVal && endVal <= end) checker = true;
+                                    });
+    
+                                    if (!checker) {
+                                        $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                    }
+                                }
+    
+                            });
+    
+                        }
+                        else {
+    
+                            $.each(timeBy3, function (key, val) {
+    
+                                let time = result.find(e => (e.appointment_time_start === val[0]));
+                                if (!time) {
+    
+                                    let checker = false;
+                                    $.each(result, function (row, item) {
+                                        let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                        let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                        
+                                        let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                        let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
+    
+                                        if(start <= startVal && endVal <= end) checker = true;
+                                    });
+    
+                                    if (!checker) {
+                                        $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                    }
+                                }
+    
+                            });
+    
+                        }
+    
+                    }
+    
+                }
+            });
+
+        }
+        else{
+
+            console.log('No date selected');
+
+        }
+
 
     });
 
-    $('#userDate').on('change', function(){
+    $('#userDate').on('change', function () {
 
         $('#timetable').replaceWith(timeTableClone.clone());
         counter = 0;
         inccounter = 1;
         var date = $(this).val();
         var time = $('#userService').attr('data-time');
+        var slot = $('#userSlot').val();
         $.ajax({
             url: "check_if_full",
             method: "GET",
             data: {
                 "date": date,
-                "time": time
+                "time": time,
+                "slot": slot
             },
-            success: function(result){
+            success: function (result) {
 
-
-                if(result == "FULL"){
+                if (result == "FULL") {
 
                     console.log("Full");
 
                 }
 
-                else{
+                else {
 
                     var time = $('#userService').attr('data-time');
+                    if (time == 30) {
 
-                    if(time == 30){
+                        $.each(timeBy30, function (key, val) {
 
-                        $.each(timeBy30, function(){
+                            let time = result.find(e => (e.appointment_time_start === val[0]));
+                            if (!time) {
 
-                            $('#timetable').append('<input class="time-checkbox" type="checkbox" data-start="'+timeBy30[counter]+'" data-end="'+timeBy30[inccounter]+'"><label>'+timeBy30[counter] +' - '+timeBy30[inccounter]+'</label><br>');
-                            if(counter == 30){
+                                let checker = false;
+                                $.each(result, function (row, item) {
+                                    let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                    let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                    
+                                    let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                    let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
 
-                               return false;
+                                    if(start <= startVal && endVal <= end) checker = true;
+                                });
 
-                            }
-                            else{
-
-                                counter += 2;
-                                inccounter += 2;
-
+                                if (!checker) {
+                                    $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                }
                             }
 
                         });
 
                     }
-                    else if(time == 60){
+                    else if (time == 60) {
 
-                        $.each(timeBy1, function(){
+                        $.each(timeBy1, function (key, val) {
 
-                            $('#timetable').append('<input class="time-checkbox" type="checkbox" data-start="'+timeBy1[counter]+'" data-end="'+timeBy1[inccounter]+'"><label>'+timeBy1[counter] +' - '+timeBy1[inccounter]+'</label><br>');
-                            if(counter == 24){
+                            let time = result.find(e => (e.appointment_time_start === val[0]));
+                            if (!time) {
 
-                                return false;
+                                let checker = false;
+                                $.each(result, function (row, item) {
+                                    let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                    let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                    
+                                    let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                    let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
 
+                                    if(start <= startVal && endVal <= end) checker = true;
+                                });
+
+                                if (!checker) {
+                                    $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                }
                             }
-                            else{
 
-                                counter += 2;
-                                inccounter +=2;
-
-                            }
                         });
 
                     }
-                    else{
+                    else {
 
-                        $.each(timeBy3, function(){
+                        $.each(timeBy3, function (key, val) {
 
-                            $('#timetable').append('<input class="time-checkbox" type="checkbox" data-start="'+timeBy3[counter]+'" data-end="'+timeBy3[inccounter]+'"><label>'+timeBy3[counter] +' - '+timeBy3[inccounter]+'</label><br>');
-                            if(counter == 20){
+                            let time = result.find(e => (e.appointment_time_start === val[0]));
+                            if (!time) {
 
-                                return false;
+                                let checker = false;
+                                $.each(result, function (row, item) {
+                                    let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                    let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                    
+                                    let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                    let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
 
-                            }
-                            else{
+                                    if(start <= startVal && endVal <= end) checker = true;
+                                });
 
-                                counter += 2;
-                                inccounter +=2;
-
+                                if (!checker) {
+                                    $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                }
                             }
 
                         });
@@ -163,32 +285,170 @@ $(document).ready(function(){
                     }
 
                 }
-        
+
             }
         });
 
     });
 
-    $(document).on("click", ".time-checkbox", function(){
+    $('.tablinks').click(function(){
+        
+        $('#timetable').replaceWith(timeTableClone.clone());
+        $('.tablinks').each(function(){
 
-        var start = $(this).attr('data-start');
-        var end = $(this).attr('data-end');
+            $(this).removeClass('modal-appointment-btn1');
+            $(this).addClass('modal-appointment-btn2')
+
+        });
+        $(this).removeClass('modal-appointment-btn2');
+        $(this).addClass('modal-appointment-btn1');
+        var data = $(this).attr('data-val');
+        $('#userSlot').val(data);
+
         var date = $('#userDate').val();
-        $.ajax({
+        var slot = $('#userSlot').val();
+        var time = $('#userService').attr('data-time');
 
-            url: "check_if_taken",
+        $.ajax({
+            url: "check_if_full",
             method: "GET",
             data: {
+                "date": date,
+                "time": time,
+                "slot": slot
+            },
+            success: function (result) {
+
+                if (result == "FULL") {
+
+                    console.log("Full");
+
+                }
+
+                else {
+
+                    var time = $('#userService').attr('data-time');
+                    if (time == 30) {
+
+                        $.each(timeBy30, function (key, val) {
+
+                            let time = result.find(e => (e.appointment_time_start === val[0]));
+                            if (!time) {
+
+                                let checker = false;
+                                $.each(result, function (row, item) {
+                                    let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                    let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                    
+                                    let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                    let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
+
+                                    if(start <= startVal && endVal <= end) checker = true;
+                                });
+
+                                if (!checker) {
+                                    $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                }
+                            }
+
+                        });
+
+                    }
+                    else if (time == 60) {
+
+                        $.each(timeBy1, function (key, val) {
+
+                            let time = result.find(e => (e.appointment_time_start === val[0]));
+                            if (!time) {
+
+                                let checker = false;
+                                $.each(result, function (row, item) {
+                                    let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                    let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                    
+                                    let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                    let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
+
+                                    if(start <= startVal && endVal <= end) checker = true;
+                                });
+
+                                if (!checker) {
+                                    $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                }
+                            }
+
+                        });
+
+                    }
+                    else {
+
+                        $.each(timeBy3, function (key, val) {
+
+                            let time = result.find(e => (e.appointment_time_start === val[0]));
+                            if (!time) {
+
+                                let checker = false;
+                                $.each(result, function (row, item) {
+                                    let start = new Date(`${item.appointment_date} ${item.appointment_time_start}`).getTime();
+                                    let end = new Date(`${item.appointment_date} ${item.appointment_time_end}`).getTime();
+                                    
+                                    let startVal = new Date(`${item.appointment_date} ${val[0]}`).getTime();
+                                    let endVal = new Date(`${item.appointment_date} ${val[1]}`).getTime();
+
+                                    if(start <= startVal && endVal <= end) checker = true;
+                                });
+
+                                if (!checker) {
+                                    $('#timeSelector').append('<option class="time-option" data-start="' + val[0] + '" data-end="' + val[1] + '" value="'+val[0]+'-'+val[1]+'">'+val[0]+' - '+val[1]+'</option>');
+                                }
+                            }
+
+                        });
+
+                    }
+
+                }
+
+            }
+        });
+
+    })
+
+    $('#submitAppointment').click(function(){
+        var name = $('#userName').val();
+        var phone = $('#userPhone').val();
+        var email = $('#userEmail').val();
+        var service = $('#userService').val();
+        var date = $('#userDate').val();
+        var slot = $('#userSlot').val();
+        var data = $('#timeSelector').val();
+        var time = data.split('-');
+        var start = time[0];
+        var end = time[1];
+        var minutes = $('#userService').attr('data-time');
+        
+        $.ajax({
+
+            url: "save_appointment",
+            method:"POST",
+            data: {
+                "name": name,
+                "phone": phone,
+                "email": email,
+                "service": service,
+                "date": date,
+                "slot": slot,
                 "start": start,
                 "end": end,
-                "date": date
+                "time": minutes
             },
             success: function(result){
 
-                console.log(result);
+                $('#alertArea').removeClass('hide');
+                $('#alertArea').addClass('show');
 
             }
-            
+
         });
 
     });

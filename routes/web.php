@@ -22,3 +22,5 @@ Route::get('/', function () {
 // AJAX routes
 Route::get('check_if_full', 'AppointmentController@checkIfDayIsFull')->name('ajax_check_if_full');
 Route::get('check_if_taken', 'AppointmentController@checkIfAppointmentExists')->name('ajax_check_if_exists');
+
+Route::post('save_appointment', 'AppointmentController@saveAppointment')->name('ajax_save_appointment');

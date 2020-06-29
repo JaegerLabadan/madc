@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="{{ asset('css/services.css') }}" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Marck+Script&display=swap');
@@ -50,28 +50,35 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Appointment Form</h5>
+              <h5 class="modal-title text-center" id="exampleModalLongTitle">Appointment Form</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <form method="POST" action="">
-                <div class="form-group">
-                  <label for="">Full Name</label>
-                  <input id="userName" type="text" class="form-control" name="fullname" placeholder="Enter Full Name">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Phone</label>
-                  <input id="userPhone" type="tel" class="form-control" name="phone" placeholder="xxxx-xxxx-xxx">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Email</label>
-                  <input id="userEmail" type="email" class="form-control" name="email" placeholder="Enter Email">
-                </div>
-
+              
+              <form method="GET" action="">
+                
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="">Full Name</label>
+                      <input id="userName" type="text" class="form-control" name="fullname" placeholder="Enter Full Name">
+                    </div>
+                  </div> 
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="">Phone</label>
+                      <input id="userPhone" type="tel" class="form-control" name="phone" placeholder="xxxx-xxxx-xxx">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="">Email</label>
+                      <input id="userEmail" type="email" class="form-control" name="email" placeholder="Enter Email">
+                    </div>
+                  </div>  
+              </div>
                 <div class="row">
                   <div class="col-md-6">
                     <label for="service">Service</label>
@@ -100,22 +107,39 @@
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="time">Available Time</label><small class="alert-no-time"> Please not that if you changed the service you need to select the date again.</small> <br>
-                  <small class="alert-no-time">Please set the date first.</small>
+                <div class="tab ">
+                  <input type="hidden" id="userSlot" value="slot 1">
+                  <button type="button" class="tablinks modal-appointment-btn1" data-val="slot 1">SEAT A</button>
+                  <button type="button" class="tablinks modal-appointment-btn2" data-val="slot 2">SEAT B</button>
+                  <button type="button" class="tablinks modal-appointment-btn2" data-val="slot 3">SEAT C</button>
+                </div>
+
+                <div class="form-group time-holder">
+                  <label for="time">Available Time</label><small class="alert-no-time">Please wait for a seconds after changing the date/service/slot.</small>
                   <div id="timetable">
-                    
+                    <select class="custom-select" id="timeSelector">
+                      <option disabled selected>Choose Time</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group text-center">
+                  <div id="alertArea" class="hide">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                      <strong>Success!</strong> Someone will be in touch with you shortly to confirm your appointment.
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
                
-                <button class="form-control" type="submit" class="btn btn-primary">Submit</button>
               </form>
                {{-- calendar appointment for today --}}
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+              <button type="button" class="btn submit-btn" id="submitAppointment">Submit</button>
+          </div>
           </div>
         </div>
       </div>
@@ -128,8 +152,8 @@
             <div class="hero-text ml-auto my-auto">
                 <span >(088) 855-0225 | 0917-771-9565</span>
                 <span style="color:#db5b02;">009 Patag 6th Division</span><span style="margin-left: -2vw;">, Cagayan De Oro City</span>
-                <i class="fa fa-facebook hero-icon"></i>
-                <i class="fa fa-instagram hero-icon"></i>
+                <i class="fab fa-facebook hero-icon"></i>
+                <i class="fab fa-instagram hero-icon"></i>
             </div>
         </div>
 

@@ -6,18 +6,20 @@ use Illuminate\Http\Request;
 
 // Model Imports
 use App\Appointments;
+use App\Records;
 
 // 
 use DateTime;
 
+
 class AppointmentController extends Controller
 {
     //
-
     public function checkIfDayIsFull(Request $request){
 
         $date = $request->get('date');
         $time = $request->get('time');
+        $slot = $request->get('slot');
         $total = 0;
         $timeArray = array(
             '9:00 am', '9:30 am',
@@ -33,65 +35,16 @@ class AppointmentController extends Controller
         $newTimeArray = array();
         $availableTime;
         $check = Appointments::where('appointment_date', $date)
-                             ->pluck('appointment_time_value')
-                             ->all();
+                             ->where('slot_no', $slot)
+                             ->get();
+
         foreach($check as $ch){
-            $total = $total + $ch;
+            $total = $total + $ch->appointment_time_value;
         }
         // Check time
         if($total <= 480){
 
-            // if($time == 30){
-
-            //     $copyOfTimeArray = $timeArray;
-            //     $taken = Appointments::where('appointment_date', $date)
-            //                          ->get();
-            //     if(!$taken->isEmpty()){
-                    
-            //         for($i = 0; $i < count($timeArray); $i++){
-    
-            //             $now = Date("H:i", strtotime($timeArray[$i]));
-            //             for($j = 0; $j < count($taken); $j++){
-    
-            //                 $start = Date("H:i", strtotime($taken[$j]->appointment_time_start));
-            //                 $end = Date("H:i", strtotime($taken[$j]->appointment_time_end));
-            //                 if($now >= $start && $now <= $end){
-        
-            //                     unset($copyOfTimeArray[$i]);
-                                
-            //                 }
-            //                 else{
-                                
-            //                     $temp = strtotime($timeArray[$i]);
-            //                     $container = Date("H:i", strtotime('+30 minutes', $temp));
-            //                     if($container >= $start && $container <= $end){
-                                
-                                    
-            //                     }
-            //                     else{
-
-            //                         array_push($newTimeArray, Date("g:i a", strtotime($temp)));
-
-            //                     }
-
-            //                 }
-    
-            //             }
-    
-            //         }
-
-            //         return $newTimeArray;
-                    
-            //     }
-            //     else{
-    
-            //         return "ALL AVAILABLE";
-    
-            //     }
-
-            // }
-
-            return "NOT FULL";
+           return $check;
 
         }
         else{
@@ -102,32 +55,39 @@ class AppointmentController extends Controller
 
     }
 
+    public function saveAppointment(Request $request){
 
-    public function checkIfAppointmentExists(Request $request){
+        $new = new Appointments;
+        $new->appointment_date = $request->get('date');
+        $new->appointment_customer = $request->get('name');
+        $new->appointment_service = $request->get('service');
+        $new->appointment_time_start = $request->get('start');
+        $new->appointment_time_end = $request->get('end');
+        $new->appointment_time_value = $request->get('time');
+        $new->slot_no = $request->get('slot');
+        $new->phone = $request->get('phone');
+        $new->email = $request->get('email');
+        $new->save();
 
-        $date = $request->get('date');
-        $start = $request->get('start');
-        $end = $request->get('end');
-        $check = Appointments::where('appointment_date', $date)
-                             ->get();
+        $check = Records::where('record_date', $request->get('date'))->get();
+        if(!$check->isEmpty()){
 
-
-        $startRecord = Date("H:i", strtotime($check[0]->appointment_time_start));
-        $endRecord = Date("H:i", strtotime($check[0]->appointment_time_end));
-
-        $start = Date("H:i", strtotime($start));
-        $end = Date("H:i", strtotime($end));
-
-        if($start >= $startRecord && $start <= $endRecord || $end >= $startRecord && $end <= $endRecord){
-
-            return "EXISTS";
+            $data = Records::where('id', $check[0]->id)
+                           ->update([
+                            'number_of_appointments' => $check[0]->number_of_appointments + 1
+                           ]);
 
         }
         else{
 
-            return "AVAILABLE";
+            $record = new Record;
+            $record->record_date = $request->get('date');
+            $record->number_of_appointments = 1;
+            $record->save();
 
         }
+
+        return "SUCCESS";
 
     }
 }
