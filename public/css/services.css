@@ -164,42 +164,31 @@
     position:relative;
     background: #db5b01;
     color:white;
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: 'Bebas Neue';
     border-radius: 13px;
     border:none;
     height: 3.5vw;
-    width: 80%;
-    height: 100%;
-
+    padding: 0 30px;
 }
 .text-center {
-    padding: 1vw 0;
+    padding: 2px 0;
 }
 /* testimonial carousel */
 .testimonial {
-    height: 60%;
     padding: 0;
     background-color: goldenrod;
-    margin: 2vw 0 0 0;
 }
 .testimonial-car {
-    height: 100%;
+    height: 50%;
     margin: 0;
     padding: 0vw 0;
     width: auto;
 }
-.testi-img-holder img{
-    /* background-color: hotpink; */
-    height: 20vw;
-    width: auto;
-    margin: -1vw 0 0 0;
-}
 .testi-img{ 
+    width: 264px;
+    height: 230px;
     justify-items: center;
-    float: right;
-    height: 40%;
-    width: 40%;
     /* background-color: goldenrod; */
 }
 p.testi-name{
@@ -207,7 +196,7 @@ p.testi-name{
     margin: auto;
     text-align: left;
     font-family: Bebas Neue;
-    font-size: 2.5vw;
+    font-size: 36px;
 }
 p.testi-service{
     font-family: 'MyWebFont';
@@ -240,31 +229,42 @@ p.testi-msg{
         height: 5vw;
         margin: 3vw 0 2vw 0;
     }
+    .service-button button:hover{
+        background-color: #1d1d1d;
+        color: white;
+    }
     .testimonial {
-        height: 35%;
         padding: 0;
-        background-color: goldenrod;
+        background-image: url('../img/testi-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    p.testi-msg{
+        color: white;
+        font-size: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 5vw 0 0;
     }
     .text-center {
         padding: 0;
     }
-    .testi-inner {
-        height: 100%;
-        width: 100%;
-        padding: 4vw 0 0 0;
+    .testi-desc{
+        align-self: center;
     }
-    .testi-img-holder img{
-        /* background-color: hotpink; */
-        height: 20vw;
-        width: auto;
-        margin: -1vw 0 0 0;
+    .testi-img{
+        width: 234px;
+        height: 200px;
     }
-    .testi-img{ 
-        justify-items: center;
-        float: right;
-        height: 40%;
-        width: 40%;
-        /* background-color: goldenrod; */
+    .testi-content{
+        display: flex;
+        padding:3vw 15vw;
+    }
+  
+    p.testi-msg{
+        color: white;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 5vw 0 0;
     }
 }
 /* END OF TABLET VERSION */
@@ -281,22 +281,34 @@ p.testi-msg{
         height: 5vw;
         margin: 3vw 0 2vw 0;
     }
+    .service-button button:hover{
+        background-color: #1d1d1d;
+        color: white;
+    }
     .testimonial {
-        height: 40%;
         padding: 0;
-        background-color: goldenrod;
+        background-image: url('../img/testi-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .text-center {
         padding: 0;
     }
-    .testi-inner {
-        height: 100%;
-        width: 100%;
-        padding: 3vw 0 0 0;
+    .testi-desc{
+        align-self: center;
     }
+    .testi-img{
+        width: 264px;
+        height: 230px;
+    }
+    .testi-content{
+        display: flex;
+        padding:3vw 15vw;
+    }
+  
     p.testi-msg{
         color: white;
-        font-size: 1.5vw;
+        font-size: 19px;
         font-family: Arial, Helvetica, sans-serif;
         padding: 0 5vw 0 0;
     }
@@ -315,22 +327,33 @@ p.testi-msg{
         height: 5vw;
         margin: 3vw 0 2vw 0;
     }
+    .service-button button:hover{
+        background-color: #1d1d1d;
+        color: white;
+    }
     .testimonial {
-        height: 50%;
         padding: 0;
-        background-color: goldenrod;
+        background-image: url('../img/testi-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .text-center {
         padding: 0;
     }
-    .testi-inner {
-        height: 100%;
-        width: 100%;
-        padding: 4vw 0 0 0;
+    .testi-desc{
+        align-self: center;
+    }
+    .testi-img{
+        width: 264px;
+        height: 230px;
+    }
+    .testi-content{
+        display: flex;
+        padding:5vw 20vw;
     }
     p.testi-msg{
         color: white;
-        font-size: 1.5vw;
+        font-size: 19px;
         font-family: Arial, Helvetica, sans-serif;
         padding: 0 5vw 0 0;
     }
@@ -341,7 +364,7 @@ p.testi-msg{
 
 /* start of mobile css */
 @media only screen and (max-width: 767px){
-    .row.service-button, .row.services, .row.testimonial{
+    .row.service-button, .row.services{
         display: none;
     }
     .col-5.mobile-service, .col-5.mobile-service1, .col-5.mobile-service2, .col-5.mobile-service3{
@@ -351,6 +374,10 @@ p.testi-msg{
     .services-list-mobile{
         padding: 0;
         margin: 0;
+    }
+    .mobile-service-button button:hover{
+        background-color: #1d1d1d;
+        color: white;
     }
     /* service text */
     .service-text h3{
@@ -415,49 +442,45 @@ p.testi-msg{
       font-family: Bebas Neue;
       text-transform: uppercase;
     }
-    .mobile-carousel .col-12{
-      padding: 0;
-      margin: 0;
-      text-align: center;
-
+    .testimonial{
+        margin: 3% 0 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../img/testi-bg.jpg');
     }
-    .mobile-testi-img{
+    p.testi-msg{
+        color: white;
+        font-size: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 5vw 0 0;
+    }
+    .text-center {
+        padding: 0;
+    }
+    .testi-desc{
+        align-self: center;
+    }
+    .testi-img{
+        width: 204px;
+        height: 170px;
+        margin: auto;
+    }
+    .testi-content{
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2vw;
-        margin-bottom: 0;
-        padding: 0;
-    }
-    .mobile-carousel p{
-        margin: 0;
-        padding: 0;
-    }
-    p.mobile-testi-name{
-        font-family: Bebas Neue;
-        font-size: 6.5vw;
-        font-weight: lighter;
-        padding:0;
-        color: black;
-    }
-
-    p.mobile-testi-service{
-        font-family: 'MyWebFont';
-        color: white;
-        letter-spacing: 2px;
-        text-transform: capitalize;
-        font-weight: bold;
-        font-size: 8.2vw;
-        margin: 0 0 0 0;
-    }
-    p.mobile-testi-msg{
-        color: white;
-        padding: 0 10vw;
+        padding:30px 60px;
         text-align: center;
-        font-size: 3.4vw;
-        /* font-family: Arial, Helvetica, sans-serif; */
-        font-weight: 500;
     }
-    
-    /* end of mobile service button */
+    p.testi-name{
+        text-align: center;
+        font-size: 30px;
+    }
+    p.testi-msg{
+        color: white;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 5vw 0 0;
+    }
+    p.testi-service{
+        font-size: 25px;
+    }
 }

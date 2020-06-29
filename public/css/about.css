@@ -328,7 +328,7 @@ html, body {
         height: 100%;
         /* background-color:green;   */
         flex-direction:column;
-        padding:4vw 1vw;
+        /* padding:4vw 1vw; */
         margin: 2vw 0 0 3vw ;
     }
     .abouttxt1 {

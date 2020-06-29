@@ -152,8 +152,8 @@
             <div class="hero-text ml-auto my-auto">
                 <span >(088) 855-0225 | 0917-771-9565</span>
                 <span style="color:#db5b02;">009 Patag 6th Division</span><span style="margin-left: -2vw;">, Cagayan De Oro City</span>
-                <i class="fab fa-facebook hero-icon"></i>
-                <i class="fab fa-instagram hero-icon"></i>
+                <a href=""><i class="fab fa-facebook hero-icon"></i></a>
+                <a href=""><i class="fab fa-instagram hero-icon"></i></a>
             </div>
         </div>
 
@@ -311,84 +311,8 @@
             </div>
             <div class="text-center col-md-4 pr-md-0"></div>
         </div>
-       
-
-      <!-- {{-- testimonial carousel --}} -->
-          <div class="row testimonial ">
-            <div class="col testimonial-car " style="background-image: url('photos/testi_bg.jpg');">
-                <div id="carouselExampleInterval" class="carousel slide testi-carousel " data-ride="carousel">
-                <div class="carousel-inner testi-inner" style="height:100%; ">
-                
-                  <div class="carousel-item active testi-bg " data-interval="10000">
-                    <div class="row align-content-center" style="height:100%;">  
-                    <div class="col-lg-4 col-sm-5 testi-img-holder">
-                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/testimonial.png') }}" alt="First slide">
-                    </div>
-                    <div class="col-lg-7 col-sm-5">
-                        <span><p class="testi-name">tina arena</p></span>
-                        <span><p class="testi-service">dental implant</p></span>
-                        <span><p class="testi-msg"> Ipsum  dolor sit amet, consectetur
-                        adipiscing elit. Mauris et luctus
-                        massa. Morbi ornare vulputate libero,
-                        non tincidunt tortor fringilla ut.</p></span>
-                    </div>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item testi-bg" data-interval="1000000">
-                    <div class="row align-items-center " style="height:100%;">
-                        <div class="col-lg-4 col-sm-5 testi-img-holder" >
-                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/test.png') }}" alt="Second slide" >
-                        </div>
-                        <div class="col-lg-7 col-sm-5">
-                            <span><p class="testi-name">palalabs</p></span>
-                            <span><p class="testi-service">dental implant</p></span>
-                            <span><p class="testi-msg"> Ipsum  dolor sit amet, consectetur
-                            adipiscing elit. Mauris et luctus
-                            massa. Morbi ornare vulputate libero,
-                            non tincidunt tortor fringilla ut.</p></span>
-                            </div>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item testi-bg" data-interval="1000000">
-                    <div class="row align-items-center " style="height:100%;">
-                    <div class="col-lg-4 col-sm-5 testi-img-holder" >    
-                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/gwapa.png') }}" alt="Third slide" >
-                    </div>
-                    <div class="col-lg-7 col-sm-5">
-                        <span><p class="testi-name">palalabs ni Ivan</p></span>
-                        <span><p class="testi-service">dental implant</p></span>
-                        <span><p class="testi-msg"> Ipsum  dolor sit amet, consectetur
-                        adipiscing elit. Mauris et luctus
-                        massa. Morbi ornare vulputate libero,
-                        non tincidunt tortor fringilla ut.</p></span>
-                        </div>
-                        </div>
-                </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only"></span>
-                </a>
-              </div>
-          </div>
-        </div>
-        <!-- {{--END OF DESKTOP VERSION --}} -->
-
-
-
-
-
-
-
-
-        <!-- {{-- MOBILE VERSION --}} -->
-        <div class="mobile-section-contain">
+       <!-- {{-- MOBILE VERSION --}} -->
+       <div class="mobile-section-contain">
         <div class="row services-mobile">
             <div class="col-12 p-0" style="height:auto;margin:0;">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -494,9 +418,80 @@
             </div>
             <div class="text-center col-md-4 pr-md-0"></div>
         </div>
+      </div>
 
+      <!-- {{-- testimonial carousel --}} -->
+          <div class="row testimonial ">
+            <div class="col testimonial-car">
+                <div id="carouselExampleInterval" class="carousel slide testi-carousel " data-ride="carousel">
+                <div class="carousel-inner testi-inner">
+                
+                  <div class="carousel-item active testi-bg " data-interval="10000">
+                    <div class="row align-items-center testi-row">  
+                    <div class="col-12 align-self-center testi-content">
+                    <img class="d-block img-fluid pr-1 testi-img" src="{{ asset('photos/testimonial.png') }}" alt="First slide">
+                    <span class="testi-desc pl-1" style="display: block"><p class="testi-name">tina arena</p>
+                      <p class="testi-service">dental implant</p>
+                      <p class="testi-msg"> Ipsum  dolor sit amet, consectetur
+                      adipiscing elit. Mauris et luctus
+                      massa. Morbi ornare vulputate libero,
+                      non tincidunt tortor fringilla ut.</p></span>
+                  </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item testi-bg " data-interval="10000">
+                    <div class="row align-items-center testi-row">  
+                    <div class="col-12 align-self-center testi-content">
+                    <img class="d-block img-fluid pr-1 testi-img" src="{{ asset('photos/testimonial.png') }}" alt="First slide">
+                    <span class="testi-desc pl-1" style="display: block"><p class="testi-name">Client#2</p>
+                      <p class="testi-service">dental implant</p>
+                      <p class="testi-msg"> Ipsum  dolor sit amet, consectetur
+                      adipiscing elit. Mauris et luctus
+                      massa. Morbi ornare vulputate libero,
+                      non tincidunt tortor fringilla ut.</p></span>
+                  </div>
+                    </div>
+                  </div>
+                  {{-- <div class="carousel-item testi-bg " data-interval="10000">
+                    <div class="row align-content-center">  
+                    <div class="col-lg-4 col-sm-5 testi-img-holder">
+                    <img class="d-block img-fluid testi-img" src="{{ asset('photos/testimonial.png') }}" alt="First slide">
+                    </div>
+                    <div class="col-lg-7 col-sm-5">
+                        <span><p class="testi-name">Customer #2</p></span>
+                        <span><p class="testi-service">dental implant</p></span>
+                        <span><p class="testi-msg"> Ipsum  dolor sit amet, consectetur
+                        adipiscing elit. Mauris et luctus
+                        massa. Morbi ornare vulputate libero,
+                        non tincidunt tortor fringilla ut.</p></span>
+                    </div>
+                    </div>
+                  </div> --}}
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+              </div>
+          </div>
+        </div>
+        <!-- {{--END OF DESKTOP VERSION --}} -->
+
+
+
+
+
+
+
+
+        
         <!-- {{-- MOBILE TESTIMONIAL --}} -->
-        <div class="row p-0 justify-content-start mobile-tesimonial">
+        {{-- <div class="row p-0 justify-content-start mobile-tesimonial">
         <div class="col mobile-testimonial" style="background-image: url('photos/testi_bg.jpg'); height:auto;">
             <div id="carouselExampleInterval2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" style="height:85vw">
@@ -554,8 +549,8 @@
           </div>
       </div>
       </div>
-    </div>
-    </div>
+    </div> --}}
+    
         <!-- {{-- END MOBILE VERSION --}} -->
         
 
