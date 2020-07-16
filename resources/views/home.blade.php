@@ -38,11 +38,12 @@
                 <h1> The smile make-over specialist</h1>
               </div>
               <div class="mobhero-button">
-                <button type="button" class="mobhero-btn"><span class="mx-auto">Start Your Smile Make-over Now</span></button>
+                <button type="button" class="mobhero-btn" data-toggle="modal" data-target="#exampleModalCenter"><span class="mx-auto">Start Your Smile Make-over Now</span></button>
               </div>
 
         </div>
-      </div> <!-- end of mobile hero row -->
+      </div> 
+      <!-- end of mobile hero row -->
 
       <!-- desktop version hero-section row -->
       <!-- modal for appointment form -->
@@ -158,6 +159,9 @@
         </div>
 
         <div class="flex-container hero-content ">
+          <video id="videoBG" poster="poster.JPG" autoplay muted loop>
+            <source src="{{ asset('videos/MADC-FB-HD-720p.mov') }}" type="video/mp4">
+          </video>
                 <div class="hero-left m-auto ">
                     <div class="hero-left-txt ">
                     <h1> The smile make-over specialist</h1>                    
@@ -210,107 +214,108 @@
     </div> <!-- end of desktop message row -->
 <!-- ------------------------------------------------------------------------------------------>
    <!-- ||  SERVICES SECTION  || -->
-    
         <!-- {{-- DESKTOP VERSION --}}
         {{-- service text --}} -->
-        <div class="row p-0 service-text">
-            <div class="text-center col-md-2 pr-md-0"></div>
-            <div class="text-center col-md-8 pr-md-0">
-                <h3>our smile make-over specialty</h3>
-            </div>
-            <div class="text-center col-md-2 pr-md-0"></div>
-        </div>
-        <!-- {{-- service images & details --}} -->
-        <div class="row justify-content-center services">
-            <div class="col-md-1"></div>
-            <div class="col-md-2 text-center ml-1 service">
-                <div class="service-label1" >
-                    <h2>dental <br> implant</h2>
-                </div>
-                <img src="{{ asset('photos/services/dental-implant.png') }}" class="img-fluid service-img" alt="Responsive image">
-               
-                <div class="service-description1">
-                    <div class="text"><h6>
-                        <h3>dental implant</h3>
-                        <br>
-                        <h5>
-                        ipsum  dolor sit amet, consectetur
-                        adipiscing elit. Mauris et luctus
-                        massa. Morbi ornare vulputate libero,
-                        non tincidunt tortor fringilla ut. 
-                        </h5>
-                        </h6>
-                </div>
-                </div>
-            </div>
+        <section>
+          <div class="row p-0 service-text" >
+              <div class="text-center col-md-2 pr-md-0"></div>
+              <div class="text-center col-md-8 pr-md-0">
+                  <h3>our smile make-over specialty</h3>
+              </div>
+              <div class="text-center col-md-2 pr-md-0"></div>
+          </div>
+        </section>
+          <!-- {{-- service images & details --}} -->
+          <div class="row justify-content-center services">
+              <div class="col-md-1"></div>
+              <div class="col-md-2 text-center ml-1 service">
+                  <div class="service-label1" >
+                      <h2>dental <br> implant</h2>
+                  </div>
+                  <img src="{{ asset('photos/services/dental-implant.png') }}" class="img-fluid service-img" alt="Responsive image">
+                
+                  <div class="service-description1">
+                      <div class="text"><h6>
+                          <h3>dental implant</h3>
+                          <br>
+                          <h5>
+                          ipsum  dolor sit amet, consectetur
+                          adipiscing elit. Mauris et luctus
+                          massa. Morbi ornare vulputate libero,
+                          non tincidunt tortor fringilla ut. 
+                          </h5>
+                          </h6>
+                  </div>
+                  </div>
+              </div>
 
-            <div class="col-md-2 text-center ml-1 service">
-                <div class="service-label2">
-                    <h2>composite <br> veeners</h2>
-                </div>
-                <img src="{{ asset('photos/services/composite-veeners.png') }}" class="img-fluid service-img" alt="Responsive image">
-                <div class="service-description2">
-                    <div class="text">
-                        <h3>composite veeners</h3>
-                        <br>
-                        <h5>
-                        ipsum  dolor sit amet, consectetur
-                        adipiscing elit. Mauris et luctus
-                        massa. Morbi ornare vulputate libero,
-                        non tincidunt tortor fringilla ut. 
-                        </h5>
-                </div>
-                </div>
-            </div>
+              <div class="col-md-2 text-center ml-1 service">
+                  <div class="service-label2">
+                      <h2>composite <br> veeners</h2>
+                  </div>
+                  <img src="{{ asset('photos/services/composite-veeners.png') }}" class="img-fluid service-img" alt="Responsive image">
+                  <div class="service-description2">
+                      <div class="text">
+                          <h3>composite veeners</h3>
+                          <br>
+                          <h5>
+                          ipsum  dolor sit amet, consectetur
+                          adipiscing elit. Mauris et luctus
+                          massa. Morbi ornare vulputate libero,
+                          non tincidunt tortor fringilla ut. 
+                          </h5>
+                  </div>
+                  </div>
+              </div>
 
-            <div class="text-center col-md-2 ml-1 service">
-                <div class="service-label3" >
-                    <h2>acrylic <br> crowns</h2>
-                </div>
-                <img src="{{ asset('photos/services/acrylic-crowns.png') }}" class="img-fluid service-img" alt="Responsive image">
-                <div class="service-description3">
-                    <div class="text">
-                        <h3>acrylic crowns</h3>
-                        <br>
-                        <h5>
-                        ipsum  dolor sit amet, consectetur
-                        adipiscing elit. Mauris et luctus
-                        massa. Morbi ornare vulputate libero,
-                        non tincidunt tortor fringilla ut. 
-                        </h5>
-                </div>
-                </div>
-            </div>
+              <div class="text-center col-md-2 ml-1 service">
+                  <div class="service-label3" >
+                      <h2>acrylic <br> crowns</h2>
+                  </div>
+                  <img src="{{ asset('photos/services/acrylic-crowns.png') }}" class="img-fluid service-img" alt="Responsive image">
+                  <div class="service-description3">
+                      <div class="text">
+                          <h3>acrylic crowns</h3>
+                          <br>
+                          <h5>
+                          ipsum  dolor sit amet, consectetur
+                          adipiscing elit. Mauris et luctus
+                          massa. Morbi ornare vulputate libero,
+                          non tincidunt tortor fringilla ut. 
+                          </h5>
+                  </div>
+                  </div>
+              </div>
 
-            <div class="text-center col-md-2 ml-1 service">
-                <div class="service-label4">
-                    <h2>smile <br> makeover</h2>
-                </div>
-                <img src="{{ asset('photos/services/smile-makeover.png') }}" class="img-fluid service-img" alt="Responsive image">
-                <div class="service-description4">
-                    <div class="text">
-                        <h3>smile makeover</h3>
-                        <br>
-                        <h5>
-                        ipsum  dolor sit amet, consectetur
-                        adipiscing elit. Mauris et luctus
-                        massa. Morbi ornare vulputate libero,
-                        non tincidunt tortor fringilla ut. 
-                        </h5>
-                </div>
-                </div>
-            </div>
+              <div class="text-center col-md-2 ml-1 service">
+                  <div class="service-label4">
+                      <h2>smile <br> makeover</h2>
+                  </div>
+                  <img src="{{ asset('photos/services/smile-makeover.png') }}" class="img-fluid service-img" alt="Responsive image">
+                  <div class="service-description4">
+                      <div class="text">
+                          <h3>smile makeover</h3>
+                          <br>
+                          <h5>
+                          ipsum  dolor sit amet, consectetur
+                          adipiscing elit. Mauris et luctus
+                          massa. Morbi ornare vulputate libero,
+                          non tincidunt tortor fringilla ut. 
+                          </h5>
+                  </div>
+                  </div>
+              </div>
 
-            <div class="col-md-1"></div>
-        </div>
+              <div class="col-md-1"></div>
+          </div>
 
-        <div class="row service-button " >
-            <div class="text-center col-md-4 pr-md-0 "></div>
-            <div class="text-center col-md-4 pr-md-0">
-                <button>see all services</button>
-            </div>
-            <div class="text-center col-md-4 pr-md-0"></div>
-        </div>
+          <div class="row service-button " >
+              <div class="text-center col-md-4 pr-md-0 "></div>
+              <div class="text-center col-md-4 pr-md-0">
+                  <button>see all services</button>
+              </div>
+              <div class="text-center col-md-4 pr-md-0"></div>
+          </div>
        <!-- {{-- MOBILE VERSION --}} -->
        <div class="mobile-section-contain">
         <div class="row services-mobile">
@@ -651,7 +656,7 @@
 <!-- ------------------------------------------------------------------------------------------>
     <!-- ||  FOOTER SECTION  || -->
     <!-- mobile version footer section -->
-      <div class="footer-row-mobile " >
+      <div class="footer-row-mobile"  style="background: white;">
           <div class="flex-container footer-contain mx-auto">
               
               <div class="footer-logo mx-auto">
@@ -702,7 +707,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 col-lg-4 footer-mapside ">
+        <div class="col-md-4 col-lg-4 footer-mapside" style="background: white;">
             <div class="flex-container mapside-contain mx-auto">     
                   <div class="mapside-logo mx-auto">
                       <img  class="img-fluid " src="{{ asset('img/madc-logo.png') }}" alt="MADC-logo">
