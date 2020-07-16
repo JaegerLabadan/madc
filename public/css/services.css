@@ -258,6 +258,7 @@ p.testi-msg{
     .testi-content{
         display: flex;
         padding:3vw 15vw;
+        align-items: center;
     }
   
     p.testi-msg{
@@ -350,6 +351,7 @@ p.testi-msg{
     .testi-content{
         display: flex;
         padding:5vw 20vw;
+        align-items: center;
     }
     p.testi-msg{
         color: white;

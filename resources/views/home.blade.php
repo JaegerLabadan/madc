@@ -146,6 +146,9 @@
       </div>
       
       <div class="row hero-row">
+        <video id="videoBG" poster="poster.JPG" autoplay muted loop>
+          <source src="{{ asset('videos/MADC-FB-HD-720p.mov') }}" type="video/mp4">
+        </video>
         <div class="flex-container hero-topbar">
             <div class="hero-logo ">
                <img  class="img-fluid mx-auto " src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
@@ -157,11 +160,10 @@
                 <a href=""><i class="fab fa-instagram hero-icon"></i></a>
             </div>
         </div>
+        
+        <div class="flex-container hero-content">
 
-        <div class="flex-container hero-content ">
-          <video id="videoBG" poster="poster.JPG" autoplay muted loop>
-            <source src="{{ asset('videos/MADC-FB-HD-720p.mov') }}" type="video/mp4">
-          </video>
+         
                 <div class="hero-left m-auto ">
                     <div class="hero-left-txt ">
                     <h1> The smile make-over specialist</h1>                    
