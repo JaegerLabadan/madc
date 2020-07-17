@@ -1,0 +1,61 @@
+
+.all-service-hero-bg{
+    background-image: url('../img/carousel-img3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    height: 100vh;
+}
+.all-service-hero-bg::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.all-serv-hero-head{
+    font-family: 'Bebas Neue'!important;
+}
+/* serv images */
+.all-serv-img1{
+    max-width: 100%;
+    max-height: 220px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+.all-serv-row::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.all-serv-title, .all-serv-row h4{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #db5b01;
+}
+.all-serv-row p, .all-serv-row h4{
+    color: #db5b01;
+}
+ .all-serv1-row{
+    background-image: url('../img/about-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.all-serv1-row::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.serv-esthetic{
+    font-weight: bold;
+    font-family: 'Bebas Neue'!important;
+    color: white;
+}

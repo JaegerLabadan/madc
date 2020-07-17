@@ -47,7 +47,12 @@ input{
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
 }
-
+.user-modal-bg{
+    background-color: rgba(0,0,0,0.6);
+}
+.user-modal-bg label{
+    color: white;
+}
 /* Safari */
 @-webkit-keyframes spin {
 0% { -webkit-transform: rotate(0deg); }
@@ -160,12 +165,15 @@ label.avail-time{
 }
 
 .modal-appointment-btn2{
-    opacity: 0.5;
+    opacity: 0.7;
     background-color: #db5b02!important;
 }
 
 .active-state{
     color: #ffff!important;
+}
+.modal-name, .modal-phone, .modal-email, .modal-service, .modal-date, .modal-service a{
+    font-family: 'Bebas Neue';
 }
 
 /* BOOTSTRAP OVERRIDES */

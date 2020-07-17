@@ -49,11 +49,11 @@
       <!-- modal for appointment form -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-          <div class="modal-content">
+          <div class="modal-content user-modal-bg">
             <div class="modal-header">
-              <h5 class="modal-title text-center" id="exampleModalLongTitle">Appointment Form</h5>
+              <h5 class="modal-title text-center text-white" id="exampleModalLongTitle">Appointment Form</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true" class="text-white">&times;</span>
               </button>
             </div>
             <div class="modal-body">
@@ -64,55 +64,51 @@
                   <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group">
                       <label for="">Full Name</label>
-                      <input id="userName" type="text" class="form-control" name="fullname" placeholder="Enter Full Name">
+                      <input id="userName" type="text" class="form-control modal-name" name="fullname" placeholder="Enter Full Name">
                     </div>
                   </div> 
                   <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group">
                       <label for="">Phone</label>
-                      <input id="userPhone" type="tel" class="form-control" name="phone" placeholder="xxxx-xxxx-xxx">
+                      <input id="userPhone" type="tel" class="form-control modal-phone" name="phone" placeholder="xxxx-xxxx-xxx">
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group">
                       <label for="">Email</label>
-                      <input id="userEmail" type="email" class="form-control" name="email" placeholder="Enter Email">
+                      <input id="userEmail" type="email" class="form-control modal-email" name="email" placeholder="Enter Email">
                     </div>
                   </div>  
-              </div>
-                <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-lg-6 col-md-6">
+                    <div class="form-group">
+                      <label for="date">Date</label>
+                      <input id="userDate" class="form-control modal-date" type="date">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
                     <label for="service">Service</label>
                     <input type="hidden" name="service" id="userService" data-time="">
                     <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle custom-select" type="button" id="dropdownServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="btn btn-secondary dropdown-toggle custom-select modal-service" type="button" id="dropdownServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Choose Service
                       </button>
                       <div class="dropdown-menu" aria-labelledby="dropdowdropdownServicesnMenuButton">
-                        <a class="dropdown-item" href="#" data-service="Consultation" data-time="30">Consultation - 30 mins</a>
-                        <a class="dropdown-item" href="#" data-service="Tooth Extraction" data-time="30">Tooth Extraction - 30 mins</a>
-                        <a class="dropdown-item" href="#" data-service="Oral prophylaxis" data-time="30">Oral prophylaxis - 30 mins</a>
-                        <a class="dropdown-item" href="#" data-service="Orthodontics adjustment" data-time="30">Orthodontics adjustment - 30 mins</a>
-                        <a class="dropdown-item" href="#" data-service="Orthodontic installation" data-time="60">Orthodontic installation- 1 hour </a>
-                        <a class="dropdown-item" href="#" data-service="Composite veneers" data-time="180">Composite veneers - 3 hours</a>
-                        <a class="dropdown-item" href="#" data-service="All porcelain veneers" data-time="180">All porcelain veneers - 3 hours</a>
+                        <a class="dropdown-item modal-service" href="#" data-service="Consultation" data-time="30">Consultation - 30 mins</a>
+                        <a class="dropdown-item modal-service" href="#" data-service="Tooth Extraction" data-time="30">Tooth Extraction - 30 mins</a>
+                        <a class="dropdown-item modal-service" href="#" data-service="Oral prophylaxis" data-time="30">Oral prophylaxis - 30 mins</a>
+                        <a class="dropdown-item modal-service" href="#" data-service="Orthodontics adjustment" data-time="30">Orthodontics adjustment - 30 mins</a>
+                        <a class="dropdown-item modal-service" href="#" data-service="Orthodontic installation" data-time="60">Orthodontic installation- 1 hour </a>
+                        <a class="dropdown-item modal-service" href="#" data-service="Composite veneers" data-time="180">Composite veneers - 3 hours</a>
+                        <a class="dropdown-item modal-service" href="#" data-service="All porcelain veneers" data-time="180">All porcelain veneers - 3 hours</a>
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="date">Date</label>
-                      <input id="userDate" class="form-control" type="date">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab ">
+              </div>
+                <div class="tab mt-3">
                   <input type="hidden" id="userSlot" value="slot 1">
-                  <button type="button" class="tablinks modal-appointment-btn1" data-val="slot 1">SEAT A</button>
-                  <button type="button" class="tablinks modal-appointment-btn2" data-val="slot 2">SEAT B</button>
-                  <button type="button" class="tablinks modal-appointment-btn2" data-val="slot 3">SEAT C</button>
+                  <button type="button" class="tablinks text-white modal-appointment-btn1" data-val="slot 1">SEAT A</button>
+                  <button type="button" class="tablinks text-white modal-appointment-btn2" data-val="slot 2">SEAT B</button>
+                  <button type="button" class="tablinks text-white modal-appointment-btn2" data-val="slot 3">SEAT C</button>
                 </div>
 
                 <div class="form-group time-holder">
@@ -156,8 +152,8 @@
             <div class="hero-text ml-auto my-auto">
                 <span >(088) 855-0225 | 0917-771-9565</span>
                 <span style="color:#db5b02;">009 Patag 6th Division</span><span style="margin-left: -2vw;">, Cagayan De Oro City</span>
-                <a href=""><i class="fab fa-facebook hero-icon"></i></a>
-                <a href=""><i class="fab fa-instagram hero-icon"></i></a>
+                <a href="https://www.facebook.com/madcdentalclinic"><i class="fab fa-facebook hero-icon"></i></a>
+                <a href="https://www.instagram.com/madcdentalclinic/?hl=en"><i class="fab fa-instagram hero-icon"></i></a>
             </div>
         </div>
         
@@ -218,7 +214,8 @@
    <!-- ||  SERVICES SECTION  || -->
         <!-- {{-- DESKTOP VERSION --}}
         {{-- service text --}} -->
-        <section>
+
+        <section class="service-bg">
           <div class="row p-0 service-text" >
               <div class="text-center col-md-2 pr-md-0"></div>
               <div class="text-center col-md-8 pr-md-0">
@@ -226,7 +223,7 @@
               </div>
               <div class="text-center col-md-2 pr-md-0"></div>
           </div>
-        </section>
+        
           <!-- {{-- service images & details --}} -->
           <div class="row justify-content-center services">
               <div class="col-md-1"></div>
@@ -238,13 +235,11 @@
                 
                   <div class="service-description1">
                       <div class="text"><h6>
-                          <h3>dental implant</h3>
+                          <h3 class="text-white">dental implant</h3>
                           <br>
-                          <h5>
-                          ipsum  dolor sit amet, consectetur
-                          adipiscing elit. Mauris et luctus
-                          massa. Morbi ornare vulputate libero,
-                          non tincidunt tortor fringilla ut. 
+                          <h5 class="text-white px-1">
+                            A dental implant is a surgical component that
+                            interfaces with the bone of the jaw or skull to support a dental prosthesis.
                           </h5>
                           </h6>
                   </div>
@@ -253,18 +248,16 @@
 
               <div class="col-md-2 text-center ml-1 service">
                   <div class="service-label2">
-                      <h2>composite <br> veeners</h2>
+                      <h2 class="text-white">composite <br> veeners</h2>
                   </div>
                   <img src="{{ asset('photos/services/composite-veeners.png') }}" class="img-fluid service-img" alt="Responsive image">
                   <div class="service-description2">
-                      <div class="text">
+                      <div class="text text-white">
                           <h3>composite veeners</h3>
                           <br>
-                          <h5>
-                          ipsum  dolor sit amet, consectetur
-                          adipiscing elit. Mauris et luctus
-                          massa. Morbi ornare vulputate libero,
-                          non tincidunt tortor fringilla ut. 
+                          <h5 class="px-1">
+                            A tooth coloured filling material, which is matched
+                            with your natural tooth shade, is applied in layers to the tooth surface.
                           </h5>
                   </div>
                   </div>
@@ -272,18 +265,16 @@
 
               <div class="text-center col-md-2 ml-1 service">
                   <div class="service-label3" >
-                      <h2>acrylic <br> crowns</h2>
+                      <h2>General <br> dentistry</h2>
                   </div>
                   <img src="{{ asset('photos/services/acrylic-crowns.png') }}" class="img-fluid service-img" alt="Responsive image">
                   <div class="service-description3">
                       <div class="text">
-                          <h3>acrylic crowns</h3>
+                          <h3>General dentistry</h3>
                           <br>
-                          <h5>
-                          ipsum  dolor sit amet, consectetur
-                          adipiscing elit. Mauris et luctus
-                          massa. Morbi ornare vulputate libero,
-                          non tincidunt tortor fringilla ut. 
+                          <h5 class="px-1">
+                            Dental examination, teeth cleaning and use of other diagnostic 
+                            equipment to prevent, or treat problems as early as possible. 
                           </h5>
                   </div>
                   </div>
@@ -298,11 +289,9 @@
                       <div class="text">
                           <h3>smile makeover</h3>
                           <br>
-                          <h5>
-                          ipsum  dolor sit amet, consectetur
-                          adipiscing elit. Mauris et luctus
-                          massa. Morbi ornare vulputate libero,
-                          non tincidunt tortor fringilla ut. 
+                          <h5 class="px-1">
+                            A smile makeover is the process of improving the
+                            appearance of the smile through one or more cosmetic dentistry procedures.
                           </h5>
                   </div>
                   </div>
@@ -311,13 +300,14 @@
               <div class="col-md-1"></div>
           </div>
 
-          <div class="row service-button " >
+          <div class="row service-button">
               <div class="text-center col-md-4 pr-md-0 "></div>
               <div class="text-center col-md-4 pr-md-0">
-                  <button>see all services</button>
+                  <a href="{{ url('/services') }}" class="text-decoration-none text-white button">see all services</a>
               </div>
               <div class="text-center col-md-4 pr-md-0"></div>
           </div>
+        </section>
        <!-- {{-- MOBILE VERSION --}} -->
        <div class="mobile-section-contain">
         <div class="row services-mobile">
@@ -332,32 +322,28 @@
                             </div>
                             <img src="{{ asset('photos/services/composite-veeners.png') }}" class="d-block w-100" alt="Responsive image" style="background-size: cover;">
                             <div class="service-description2">
-                                <div class="text">
+                                <div class="text text-white">
                                     <h3>composite veeners</h3>
                                     
                                     <h5>
-                                    Ipsum  dolor sit amet, consectetur
-                                    adipiscing elit. mauris et luctus
-                                    massa. Morbi ornare vulputate libero,
-                                    non tincidunt tortor fringilla ut. 
+                                      A tooth coloured filling material, which is matched
+                                      with your natural tooth shade, is applied in layers to the tooth surface.
                                     </h5>
                             </div>
                             </div>
                         </div>
                         <div class="col-5 ml-3 text-center mobile-service1 mobile-service-hover1">
                             <div class="service-label3">
-                                <h2>acrylic <br> crowns</h2>
+                                <h2>general <br> denstistry</h2>
                             </div>
                             <img src="{{ asset('photos/services/acrylic-crowns.png') }}" class="d-block w-100" alt="Responsive image" style="background-size: cover;">
                             <div class="service-description3">
-                                <div class="text">
-                                    <h3>acrylic crowns</h3>
+                                <div class="text text-white">
+                                    <h3>general denstistry</h3>
                                     
                                     <h5>
-                                    Ipsum  dolor sit amet, consectetur
-                                    adipiscing elit. mauris et luctus
-                                    massa. Morbi ornare vulputate libero,
-                                    non tincidunt tortor fringilla ut. 
+                                      Dental examination, teeth cleaning and use of other diagnostic 
+                                      equipment to prevent, or treat problems as early as possible.  
                                     </h5>
                             </div>
                             </div>
@@ -373,14 +359,12 @@
                             </div>
                             <img src="{{ asset('photos/services/dental-implant.png') }}" class="d-block w-100" alt="Responsive image" style="background-size: cover;">
                             <div class="service-description1">
-                                <div class="text">
-                                    <h3>composite veeners</h3>
+                                <div class="text text-white">
+                                    <h3>dental implant</h3>
                                     
                                     <h5>
-                                    Ipsum  dolor sit amet, consectetur
-                                    adipiscing elit. mauris et luctus
-                                    massa. Morbi ornare vulputate libero,
-                                    non tincidunt tortor fringilla ut. 
+                                      A dental implant is a surgical component that
+                                      interfaces with the bone of the jaw or skull to support a dental prosthesis.
                                     </h5>
                             </div>
                             </div>
@@ -391,14 +375,12 @@
                             </div>
                             <img src="{{ asset('photos/services/smile-makeover.png') }}" class="d-block w-100" alt="Responsive image" style="background-size: cover;">
                             <div class="service-description4">
-                                <div class="text">
-                                    <h3>acrylic crowns</h3>
+                                <div class="text text-white">
+                                    <h3>smile makeover</h3>
                                     
                                     <h5>
-                                    Ipsum  dolor sit amet, consectetur
-                                    adipiscing elit. mauris et luctus
-                                    massa. Morbi ornare vulputate libero,
-                                    non tincidunt tortor fringilla ut. 
+                                      A smile makeover is the process of improving the
+                                      appearance of the smile through one or more cosmetic dentistry procedures.
                                     </h5>
                             </div>
                             </div>
@@ -420,8 +402,8 @@
         </div>
         <div class="row mobile-service-button" style="padding: 0;margin-top:1.8vw;">
             <div class="text-center col-md-4 pr-md-0"></div>
-            <div class="text-center col-md-4 pr-md-0">
-                <button>see all smile make-over services</button>
+            <div class="text-center col-md-4 my-4 pr-md-0">
+                <a href="{{ url('/services') }}" class="text-decoration-none text-white button">see all smile make-over services</a>
             </div>
             <div class="text-center col-md-4 pr-md-0"></div>
         </div>
@@ -746,15 +728,22 @@
 
             <div class="col-md-5 col-lg-5 footer-mapbot-right">
               <span> FOLLOW US ON SOCIAL MEDIA</span><br>
-              <span >FACEBOOK</span><span style="color:#db5b02;"> | </span>
-              <span >INSTAGRAM</span><span style="color:#db5b02;"> | </span>
-              <span >TWITTER</span>
+              <span >
+               <a href="https://www.facebook.com/madcdentalclinic" class="text-secondary text-decoration-none">FACEBOOK</a>
+              </span><span style="color:#db5b02;"> | </span>
+              <span >
+               <a href="https://www.instagram.com/madcdentalclinic/?hl=en" class="text-secondary text-decoration-none">INSTAGRAM</a>
+              </span>
             </div>
         </div>
 
         <div class="flex-container footer-mapbot2 mx-auto">
               <span >MADC DENTAL CLINIQUE</span><span style="color:#db5b02;"> | THE SMILE MAKE-OVER SPECIALIST</span>
-              <br><span >WEBSITE SKILLFULLY CRAFTED BY</span><span style="color:#24a3ec;"> CREATIVE OUTSOURCE SOLUTIONS</span>
+              <br><span >WEBSITE SKILLFULLY CRAFTED BY</span><span style="color:#24a3ec;">
+                <a href="creativeoutsourcesolutions.com" class="text-decoration-none">
+                  CREATIVE OUTSOURCE SOLUTIONS
+                </a>
+                </span>
         </div>
     </div>
    

@@ -25,9 +25,12 @@
 }
 .service-img{
     position: relative;
-    z-index: -1;
+    z-index: 1;
     background-size: cover;
     width:100%;
+}
+.service-bg{
+    background-color: black;
 }
 
 
@@ -40,6 +43,7 @@
     overflow: hidden;
     margin: 0;
     width: 100%;
+    z-index: 3;
 }
 .service-label1 h2, .service-label2 h2, .service-label3 h2, .service-label4 h2{
     font-family: bebas neue;
@@ -54,7 +58,7 @@
     color: black;
 }
 .service-label3 h2{
-    color: white;
+    color: #db5b01;
 }
 .service-label4 h2{
     color: white;
@@ -103,6 +107,7 @@
     margin: auto;
     height: 0;
     transition: .2s ease;
+    z-index: 3;
 }
 .col-md-2.service:hover .service-description1, .col-md-2.service:hover .service-description2,
 .col-md-2.service:hover .service-description3, .col-md-2.service:hover .service-description4 {
@@ -160,7 +165,7 @@
       margin: 2vw 0;
       
   }
-.service-button button {
+.service-button a {
     position:relative;
     background: #db5b01;
     color:white;
@@ -227,9 +232,9 @@ p.testi-msg{
         display: flex;
         align-self: center;
         height: 5vw;
-        margin: 3vw 0 2vw 0;
+        margin: 3vw 0 0 0;
     }
-    .service-button button:hover{
+    .service-button a:hover{
         background-color: #1d1d1d;
         color: white;
     }
@@ -280,9 +285,9 @@ p.testi-msg{
         display: flex;
         align-self: center;
         height: 5vw;
-        margin: 3vw 0 2vw 0;
+        margin: 3vw 0 0 0;
     }
-    .service-button button:hover{
+    .service-button a:hover{
         background-color: #1d1d1d;
         color: white;
     }
@@ -326,9 +331,9 @@ p.testi-msg{
         display: flex;
         align-self: center;
         height: 5vw;
-        margin: 3vw 0 2vw 0;
+        margin: 3vw 0 0 0;
     }
-    .service-button button:hover{
+    .service-button a:hover{
         background-color: #1d1d1d;
         color: white;
     }
@@ -366,6 +371,9 @@ p.testi-msg{
 
 /* start of mobile css */
 @media only screen and (max-width: 767px){
+    .mobile-section-contain{
+        background-color: black;
+    }
     .row.service-button, .row.services{
         display: none;
     }
@@ -377,7 +385,7 @@ p.testi-msg{
         padding: 0;
         margin: 0;
     }
-    .mobile-service-button button:hover{
+    .mobile-service-button a:hover{
         background-color: #1d1d1d;
         color: white;
     }
@@ -432,7 +440,7 @@ p.testi-msg{
       }
     
       /* mobile all service button */
-    .mobile-service-button button{
+    .mobile-service-button a{
       padding: 2.5vw 3vw 2.5vw 3vw;
       margin: 2vw 0 0 0;
       color:white;
@@ -445,7 +453,7 @@ p.testi-msg{
       text-transform: uppercase;
     }
     .testimonial{
-        margin: 3% 0 0 0;
+        margin: 0 0 0 0;
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url('../img/testi-bg.jpg');
