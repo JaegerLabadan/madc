@@ -77,7 +77,7 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-4 col-md-6">
                 <div class="card mt-4 shadow " style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img6.jpg') }}"
+                    <img src="{{ asset('/img/emax.png') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">emax veneers</h4>
@@ -90,7 +90,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card mt-4 shadow" style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img5.jpg') }}"
+                    <img src="{{ asset('/img/zirconia.jpg') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">Zirconia veneers</h4>
@@ -106,13 +106,13 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-4 col-md-6">
                 <div class="card mt-4 shadow " style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img6.jpg') }}"
+                    <img src="{{ asset('/img/FELDSPATHIC.jfif') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">feldspathic veneers</h4>
                         <p>
                             Feldspathic veneers are created by layering glass-based (ie, silicon dioxide) powder and
-                            liquid materials.8,9 Silicon dioxide, also referred to as silica or quartz, contains
+                            liquid materials also referred to as silica or quartz, contains
                             various amounts of alumina.
                         </p>
                     </div>
@@ -120,7 +120,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card mt-4 shadow" style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img5.jpg') }}"
+                    <img src="{{ asset('/img/direct.jpg') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">direct composite veneers</h4>
@@ -141,7 +141,7 @@
             {{-- 1st-row --}}
             <div class="col-lg-4 mt-4 col-md-6">
                 <div class="card shadow" style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img6.jpg') }}"
+                    <img src="{{ asset('/img/dental-implant.jpg') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">Dental implant</h4>
@@ -154,7 +154,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card mt-4 shadow" style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img5.jpg') }}"
+                    <img src="{{ asset('/img/prosto.jpg') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">Prosthodontics</h4>
@@ -167,7 +167,7 @@
             </div>
             <div class="col-lg-4  col-md-6">
                 <div class="card mt-4 shadow" style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img5.jpg') }}"
+                    <img src="{{ asset('/img/general.jpg') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
 
@@ -182,7 +182,7 @@
             {{-- 2nd-row --}}
             <div class="col-lg-4 col-md-6">
                 <div class="card mt-4 shadow " style="width: width: 100%;max-height:480px;height:480px;">
-                    <img src="{{ asset('/img/carousel-img6.jpg') }}"
+                    <img src="{{ asset('/img/esthetic.jpg') }}"
                         class="card-img-top d-flex mx-auto all-serv-img1" alt="...">
                     <div class="card-body">
                         <h4 class="text-center mb-4 all-serv-title">Oral esthetic surgery</h4>
