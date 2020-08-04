@@ -45,7 +45,7 @@
     .footer-contacts span {
         font-family: 'Bebas Neue';
         font-weight: 400;
-        font-size: 4vw;
+        /* font-size: 4vw; */
         color: black;
         letter-spacing: .3vw;
         margin: -20vw 0 0 0;
@@ -94,7 +94,7 @@
     }
     .trademark {
         background-color: rgb(0, 0, 0);
-        height: 15vw;
+        /* height: 15vw; */
         width: 100%;
         text-align: center;
         line-height: 1;
@@ -105,7 +105,7 @@
     .trademark span{
         font-family: 'Bebas Neue';
         font-weight: 400;
-        font-size: 3.5vw;
+        font-size: 4.vw;
         color: rgb(255, 255, 255);
         text-align: center;
         letter-spacing: .4vw;

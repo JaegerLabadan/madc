@@ -65,22 +65,19 @@ html, body {
         color: #db5b02;
     }
     .about-name {
-        margin-top: 1vw;
-        font-size: 6vw;
+        margin-top: 5vw;
         text-align: center;
         font-family: 'MyWebFont';
         color: #ffffff;
         
     }
     .about-position {
-        font-size: 4vw;
         text-align: center;
         font-family: 'Bebas Neue';
         color: #db5b02;
         margin-top:-2vw;
     }
     .about-label {
-        font-size: 2.5vw;
         text-align: center;
         font-family: Helvetica, sans-serif;
         color: #ffffff;

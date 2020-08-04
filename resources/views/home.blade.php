@@ -32,7 +32,9 @@
       <div class="row hero-mobile">
         <div class="flex-container mobhero-content mx-auto">
               <div class="mob-logo ">
+                <a href="{{ url('/') }}">
               <img  class="img-fluid" src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
+                </a>
               </div>
               <div class="mobhero-text ">
                 <h1> The smile make-over specialist</h1>
@@ -147,13 +149,15 @@
         </video>
         <div class="flex-container hero-topbar">
             <div class="hero-logo ">
+              <a href="{{ url('/') }}">
                <img  class="img-fluid mx-auto " src="{{ asset('img/madc-logo-black.png') }}" alt="MADC-logo">
+              </a>
             </div>
             <div class="hero-text ml-auto my-auto">
                 <span >(088) 855-0225 | 0917-771-9565</span>
                 <span style="color:#db5b02;">009 Patag 6th Division</span><span style="margin-left: -2vw;">, Cagayan De Oro City</span>
-                <a href="https://www.facebook.com/madcdentalclinic"><i class="fab fa-facebook hero-icon"></i></a>
-                <a href="https://www.instagram.com/madcdentalclinic/?hl=en"><i class="fab fa-instagram hero-icon"></i></a>
+                <a href="https://www.facebook.com/madcdentalclinic" target="_blank" ><i class="fab fa-facebook hero-icon"></i></a>
+                <a href="https://www.instagram.com/madcdentalclinic/?hl=en" target="_blank" ><i class="fab fa-instagram hero-icon"></i></a>
             </div>
         </div>
         
@@ -267,7 +271,7 @@
                   <div class="service-label3" >
                       <h2>General <br> dentistry</h2>
                   </div>
-                  <img src="{{ asset('photos/services/acrylic-crowns.png') }}" class="img-fluid service-img" alt="Responsive image">
+                  <img src="{{ asset('photos/services/general-dentist.jpg') }}" class="img-fluid service-img" alt="Responsive image">
                   <div class="service-description3">
                       <div class="text">
                           <h3>General dentistry</h3>
@@ -336,7 +340,7 @@
                             <div class="service-label3">
                                 <h2>general <br> denstistry</h2>
                             </div>
-                            <img src="{{ asset('photos/services/acrylic-crowns.png') }}" class="d-block w-100" alt="Responsive image" style="background-size: cover;">
+                            <img src="{{ asset('photos/services/general-dentist.jpg') }}" class="d-block w-100" alt="Responsive image" style="background-size: cover;">
                             <div class="service-description3">
                                 <div class="text text-white">
                                     <h3>general denstistry</h3>
@@ -662,7 +666,7 @@
               </div>
 
               <div class="footer-buttons mx-auto">
-              <button type="button" class="footer-btn1"><span class="m-auto">BOOK AN APPOINTMENT NOW</span></button>
+              <button type="button" class="footer-btn1" data-toggle="modal" data-target="#exampleModalCenter"><span class="m-auto">BOOK AN APPOINTMENT NOW</span></button>
               <button type="button" class="footer-btn2"><span class="m-auto">GET DIRECTIONS TO THE CLINIC</span></button>
               </div>         
           </div>
@@ -670,7 +674,10 @@
       <div class="flex-container trademark-contain ">
           <div class="trademark  ">
               <span >MADC DENTAL CLINIC</span><span style="color:#db5b02;"> | THE SMILE MAKE-OVER SPECIALIST</span><br>
-              <span>POWERED BY CREATIVE</span><span style="color:#24a3ec;"> OUTSOURCE SOLUTIONS 2020</span><br>
+              <span>POWERED BY CREATIVE</span><span style="color:#24a3ec;">
+                <a href="http://www.creativeoutsourcesolutions.com" target="_blank" class="text-decoration-none">
+                  OUTSOURCE SOLUTIONS 2020
+                </a></span><br>
           </div>
       </div>
      
@@ -729,10 +736,10 @@
             <div class="col-md-5 col-lg-5 footer-mapbot-right">
               <span> FOLLOW US ON SOCIAL MEDIA</span><br>
               <span >
-               <a href="https://www.facebook.com/madcdentalclinic" class="text-secondary text-decoration-none">FACEBOOK</a>
+               <a href="https://www.facebook.com/madcdentalclinic" target="_blank" class="text-secondary text-decoration-none">FACEBOOK</a>
               </span><span style="color:#db5b02;"> | </span>
               <span >
-               <a href="https://www.instagram.com/madcdentalclinic/?hl=en" class="text-secondary text-decoration-none">INSTAGRAM</a>
+               <a href="https://www.instagram.com/madcdentalclinic/?hl=en" target="_blank" class="text-secondary text-decoration-none">INSTAGRAM</a>
               </span>
             </div>
         </div>
@@ -740,7 +747,7 @@
         <div class="flex-container footer-mapbot2 mx-auto">
               <span >MADC DENTAL CLINIQUE</span><span style="color:#db5b02;"> | THE SMILE MAKE-OVER SPECIALIST</span>
               <br><span >WEBSITE SKILLFULLY CRAFTED BY</span><span style="color:#24a3ec;">
-                <a href="creativeoutsourcesolutions.com" class="text-decoration-none">
+                <a href="http://www.creativeoutsourcesolutions.com" target="_blank" class="text-decoration-none">
                   CREATIVE OUTSOURCE SOLUTIONS
                 </a>
                 </span>
